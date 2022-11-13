@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { Suspense } from "react";
 import HomePage from "./components/Homepage/HomePage";
 import NavBar from "./components/navBar/NavBar";
-import Footer from "./components/navBar/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (

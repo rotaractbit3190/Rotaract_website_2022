@@ -15,6 +15,11 @@ ul {
     
   }
   .header{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
     background-color:#0B0C15;
     height: 100px;
     display: flex;
@@ -23,6 +28,7 @@ ul {
    
     border-bottom: 0.5px solid #9aa0a6;
     box-shadow: 2px 7px 15px #9347FF;
+    
   }
 
   /* .navFix{
