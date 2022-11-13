@@ -1,3 +1,8 @@
+/* *{
+  overflow: hidden;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .head {
   padding-left: 290px;
   padding-top: 80px;
@@ -6,16 +11,29 @@
   font-size: 65px;
   color: white;
   text-align: centre;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+
 }
 
-.deerLogo {
-  width: 400px;
-  height: 400px;
 
-  margin-bottom: 100px;
-  margin-top: 60px;
-  border-radius: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: 450px;
+.for-deer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.for-deer::before{
+  content: '';
+  background-image: url('./deer.png');
+  background-repeat: no-repeat;
+  background-size: 43rem;
+  position: absolute;
+  left: 18rem;
+  top: 20rem;
+  width: 66%;
+  height: 100%;
+  z-index: -1000;
+  overflow: hidden;
+  opacity: 0.3;
+
 }

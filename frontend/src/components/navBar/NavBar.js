@@ -1,31 +1,26 @@
-
 import "./nav.css";
 
-
-import React from 'react'
+import { Link } from "react-router-dom";
+import logo from "./logo.png";
+import React from "react";
 
 export default function nav() {
   return (
-    <div className="navFix">
     <nav>
-      <ul>
-        {/* <li><img src={logo} className="logoSize left"/></li> */}
-        <li className="right">
-          <a class="active" href="#home">
-            CONTACT
-          </a>
-        </li>
-        <li className="right">
-          <a href="#news">EVENTS</a>
-        </li>
-        <li className="right">
-          <a href="#contact">ABOUT</a>
-        </li>
-        <li className="right">
-          <a href="#about">HOME</a>
-        </li>
-      </ul>
+      <div className="header">
+        <div className="innerheader">
+          <div className="logo-image">
+            <img src={logo} className="logoSize " />
+          </div>
+          <ul>
+            <li><Link>Home</Link></li>
+            <li><Link>Events</Link></li>
+            <li><Link>Board</Link></li>
+            <li><Link>Contact</Link></li>
+            <li><Link>Join Us</Link></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-  </div>
-  )
+  );
 }

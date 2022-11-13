@@ -6,7 +6,8 @@ function heading(){
     return(
         <div className="head">
             <h1 className="headText">ROTARACT CLUB OF B.I.T</h1>
-            <img src={Deer} className="deerLogo" alt="deer"/>
+            <div className="for-deer"></div>
+            {/* <img src={Deer} className="deerLogo" alt="deer"/> */}
         </div>
     );
 }
