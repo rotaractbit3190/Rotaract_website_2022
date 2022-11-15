@@ -1,18 +1,21 @@
 /* *{
   overflow: hidden;
 } */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 .head {
-  padding-left: 290px;
-  padding-top: 80px;
+text-align: center;
 }
 .headText {
+  padding-top: 200px;
   font-size: 65px;
   color: white;
   text-align: centre;
   font-family: 'Poppins', sans-serif;
-  font-weight: bold;
+  font-weight:bold;
+  text-shadow:6px 2px #183F46;
 
 }
 
@@ -28,12 +31,21 @@
   background-repeat: no-repeat;
   background-size: 43rem;
   position: absolute;
-  left: 18rem;
+  left: 23%;
   top: 20rem;
   width: 66%;
   height: 100%;
   z-index: -1000;
   overflow: hidden;
   opacity: 0.3;
+
+}
+
+.typingtext{
+  color: antiquewhite;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  text-shadow:5px 3px #6835b6
+
 
 }

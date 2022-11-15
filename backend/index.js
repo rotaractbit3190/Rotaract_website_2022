@@ -9,11 +9,11 @@ app.use(express.json())
 
 
 
-app.route('/user',require('./routes/userauth'))
-app.route('/rotaract',require('./routes/board'))
+app.use('/user',require('./routes/userauth'))
+app.use('/rotaract',require('./routes/board'))
 
 
 app.listen(PORT,()=>{
-    console.log("we are onlinee")
+    console.log("we are onlinee at http://localhost:5000")
 
 })

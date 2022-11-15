@@ -7,6 +7,7 @@ import React, { Suspense } from "react";
 import HomePage from "./components/Homepage/HomePage";
 import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import Login from "./components/login/Login";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Suspense>
         <Footer/>

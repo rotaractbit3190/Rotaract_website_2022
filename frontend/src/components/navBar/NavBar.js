@@ -13,7 +13,7 @@ export default function nav() {
             <img src={logo} className="logoSize " />
           </div>
           <ul>
-            <li><Link>Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link>Events</Link></li>
             <li><Link>Board</Link></li>
             <li><Link>Contact</Link></li>
