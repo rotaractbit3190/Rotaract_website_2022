@@ -31,9 +31,16 @@
 }
 .copyrights{
     color: aliceblue;
-
-}
-.copyrights{
     font-family: 'Poppins', sans-serif;
     text-align: center;
+}
+
+@media  screen and (max-width:961px) {
+    .copyrights{
+        color: aliceblue;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding-bottom: 200px
+    }
+    
 }

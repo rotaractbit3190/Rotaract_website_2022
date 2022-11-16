@@ -49,3 +49,42 @@ text-align: center;
 
 
 }
+
+@media screen and (max-width:961px) {
+  .headText {
+    padding-top: 200px;
+    font-size: 40px;
+    color: white;
+    text-align: centre;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+    text-shadow:6px 2px #183F46;
+  
+  }
+  
+.typingtext{
+  color: antiquewhite;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  text-shadow:4px 3px #6835b6
+
+
+}
+.for-deer::before{
+  content: '';
+  background-image: url('./deer.png');
+  background-repeat: no-repeat;
+  background-size: 20rem;
+  position: absolute;
+  left: 10%;
+  top: 30rem;
+  width: 88%;
+  height: 100%;
+  z-index: -1000;
+  overflow: hidden;
+  opacity: 0.3;
+
+}
+
+  
+}

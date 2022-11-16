@@ -31,13 +31,9 @@ ul {
     
   }
 
-  /* .navFix{
-    position: sticky;
-  top: 0;
-  background-color: transparent;
-    
-  }
-   */
+.burger-name{
+  display: none;
+}
   .right {
     float: right;
     font-size:20px;
@@ -92,4 +88,106 @@ ul {
   .innerheader{
     display: flex;
     flex-direction: row;
+  }
+
+  @media screen and (max-width: 961px) {
+    .burger-name{
+      display: block;
+      margin-left: 37vw;
+      padding-top: 10px;
+      color: white;
+    }
+    .logo-image{
+      width: 180px;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .logoSize{
+      width: 100%;
+      height: 100%;
+      padding-left: 10px;
+      
+      
+    }
+    .reactive-header {
+      display: block;
+      height: 100px;
+      background-color:#111320;
+      position: fixed;
+      right: 0%;
+      top: 0%;
+      z-index: 1000;
+      height: 100vh;
+      width: 70%;
+ 
+    }
+    .popout-logo-start-img{
+      width: 230px;
+      align-items: center;
+    }
+    .popout-logo-start{
+      margin-top: 50px;
+    }
+    .reactive-header-tags{
+      margin-top: 70px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      color: #8d9297;
+      font-family: "Open Sans", sans-serif;
+      font-size: 100px;
+      font-weight: bold;
+      align-items: center;
+
+    }
+    li{
+      list-style: none;
+    }
+    li a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 20px;
+    font-size: 5vw;
+    }
+    .background-drawer {
+      display: block;
+      height: 100px;
+      background-color: #1F1838;
+      opacity: 0.7;
+      position: fixed;
+      right: 0%;
+      top: 0%;
+      z-index: 1;
+      height: 100vh;
+      width: 100%;
+    }
+    .header {
+      position: fixed;
+      overflow: hidden;
+      width: 100%;
+      top: 0;
+      background-color: transparent;
+      background-color: #0B0C15;
+      height: 84px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom: 0.5px solid #9aa0a6;
+      display: flex;
+      align-items: end;
+      flex-direction: row;
+      box-shadow: 2px 7px 15px #9347ff;
+    }
+    .innerheader {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+  }
+
   }

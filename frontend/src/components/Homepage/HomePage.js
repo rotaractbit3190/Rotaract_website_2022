@@ -2,9 +2,9 @@ import React from 'react'
 import Heading from './header/Backgroundlogo'
 
 
-export default function HomePage() {
+export default function HomePage(props) {
   return (
-    <Heading/>
+    <Heading check={props.nocursor}/>
     
   )
 }
