@@ -27,7 +27,7 @@ export default function NavBar(props) {
       <div className="header">
         <div className="innerheader">
           <div className="logo-image">
-            <img src={logo} className="logoSize " />
+            <img src={logo} alt="here you go" className="logoSize " />
           </div>
           <div className="burger-name">
             <FiMenu size="2rem" className="try" onClick={handleClick} />
@@ -37,16 +37,16 @@ export default function NavBar(props) {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link>Events</Link>
+              <Link to="Events">Events</Link>
             </li>
             <li>
-              <Link>Board</Link>
+              <Link to="Board">Board</Link>
             </li>
             <li>
-              <Link>Contact</Link>
+              <Link >Contact</Link>
             </li>
             <li>
-              <Link>Join Us</Link>
+              <Link to='www.google.com'>Join Us</Link>
             </li>
           </ul>
         </div>
@@ -63,8 +63,13 @@ export default function NavBar(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/About" className="header-li" onClick={gotop}>
-                  About Us
+                <Link to="/Events" className="header-li" onClick={gotop}>
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link to="/Board" className="header-li" onClick={gotop}>
+                  Board
                 </Link>
               </li>
               <li>
@@ -72,11 +77,7 @@ export default function NavBar(props) {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <Link to="/Projects" className="header-li " onClick={gotop}>
-                  Projects
-                </Link>
-              </li>
+             
             </div>
           </div>
         ) : null}

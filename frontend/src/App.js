@@ -8,6 +8,9 @@ import HomePage from "./components/Homepage/HomePage";
 import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/login/Login";
+import Board from "./components/Board/Board";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Events from "./components/Events/Events";
 
 export default function App() {
   const [checkcursor, setcheckcursor] = useState(true)
@@ -24,6 +27,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage nocursor={checkcursor} />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/Board" element={<Board/>} />
+            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/Events" element={<Events />} />
           </Routes>
         </Suspense>
         <Footer/>
