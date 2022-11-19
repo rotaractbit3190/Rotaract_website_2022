@@ -1,20 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Event from "./Event";
+import Modal from "../modal/Modal";
 export default function Events() {
   const [title, settitle] = useState({ title: "", description: "" });
   const [image, setimage] = useState("");
   const [loading, setloading] = useState(false);
   const refClose = useRef();
-  const initial=[]
-  const [content, setcontent] = useState(initial)
+  const initial = [];
+  const [content, setcontent] = useState(initial);
   useEffect(() => {
-  
-    GetAllData()
-  
-  
-     // eslint-disable-next-line
-  }, [])
+    GetAllData();
+
+    // eslint-disable-next-line
+  }, []);
 
   const handleChange = (e) => {
     settitle({ ...title, [e.target.name]: e.target.value });
@@ -30,12 +29,14 @@ export default function Events() {
     e.preventDefault();
     try {
       const storage = getStorage();
+      console.log("1")
       const storageRef = ref(storage, `Events/${image.name}`);
       // setloading(true);
 
       uploadBytes(storageRef, image).then((snapshot) => {
         getDownloadURL(storageRef).then((url) => {
           setimage(url);
+          console.log("2")
         });
 
         // setloading(false);
@@ -77,7 +78,7 @@ export default function Events() {
     const sort = content.filter((e) => {
       return e.id !== id;
     });
-    console.log(sort)
+    console.log(sort);
     setcontent(sort);
   };
   const handleClick = async (e) => {
@@ -97,119 +98,46 @@ export default function Events() {
     const json = await response.json();
 
     setcontent(content.concat(json));
-   
+    
+    settitle({ title: "", description: "" });
+    
+ 
+    console.log(title);
     refClose.current.click();
-    settitle({ title: "", description: "" })
-    console.log(title)
+    
    
   };
 
+  // const toclose=()=>{
+  //   refClose.current.click();
+  // }
+
   return (
-    <div className="card-start">
-   
-        <button
-          type="button"
-          className="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Add Events
-        </button>
-      
-
-      <div
-        className="modal fade"
-        id="exampleModal"
-        tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
-                Add an Event
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <form>
-              <div className="modal-body">
-                <label htmlFor="name" className="form-label">
-                  EVENT details
-                </label>
-                <input
-                  type="text"
-                  onChange={handleChange}
-                  className="form-control"
-                  name="title"
-                  id="title"
-                  minLength={3}
-                  required
-                />
-                <label htmlFor="post">Event description</label>
-                <textarea
-                  name="description"
-                  className="form-control"
-                  id="description"
-                  onChange={handleChange}
-                  minLength={3}
-                  required
-                />
-
-                <label htmlFor="post">Input file</label>
-                <input
-                  type="file"
-                  onChange={handleFile}
-                  accept=".jpg,.png,.jpeg"
-                  name="photo"
-                  className="form-control"
-                  id="photo"
-                  minLength={1}
-                  required
-                />
-                <div>
-                  <button onClick={CreateUpload}>Upload</button>
-                  {/* <Loader isloading={loading} /> */}
-                </div>
-              </div>
-            </form>
-            <div className="modal-footer">
-              <button
-                type="button"
-                ref={refClose}
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={handleClick}
-                disabled={
-                  loading === true ||
-                  image.length === 0 ||
-                  title.description.length < 5
-                  // title.name.length < 2
-                }
-              >
-                Save changes
-              </button>
-            </div>
-          </div>
+    <>
+    
+     
+      <div className="card-start">
+      <Modal
+        handleChange={handleChange}
+        handleFile={handleFile}
+        CreateUpload={CreateUpload}
+        refClose={refClose}
+        // toclose={toclose}
+        handleClick={handleClick}
+        image={image}
+        testimage={image.length}
+        testlength={title.description.length}
+        testtitle={title.title.length}
+        title={title}
+        loading={loading}
+        event={"Add an event"}
+      />
+        <div className="flex-box">
+          {content.map((e) => {
+            return <Event data={e} key={e.id} deleteEvent={HandleDelete} />;
+          })}
         </div>
       </div>
-    
-      <div className="flex-box">
-        {content.map((e) => {
-          return <Event data={e} key={e.id} deleteEvent={HandleDelete} />;
-        })}
-      </div>
-    </div>
+    </>
   );
 }

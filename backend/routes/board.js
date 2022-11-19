@@ -11,6 +11,29 @@ const {
 
 const db = getFirestore();
 
+
+
+
+router.get(
+  "/getallbod",
+  
+
+  async (req, res) => {
+    try{
+      const citiesRef = db.collection(`${year}`);
+      const snapshot = await citiesRef.get();
+      const data= snapshot.docs.map((doc)=>({id:doc.id,...doc.data()}))
+      res.json(data)
+      // res.json(alldata)
+
+    }catch(err){
+      console.log(err.message)
+
+    }
+    
+  }
+);
+
 router.post('/adddata',async(req,res)=>{
     const {name, title, image,year,description } = req.body;
     const projects = db.collection(`${year}`);
