@@ -131,10 +131,13 @@ export default function Events() {
         title={title}
         loading={loading}
         event={"Add an event"}
+        name={"Event Name"}
+        description={"Event Description"}
+        
       />
         <div className="flex-box">
           {content.map((e) => {
-            return <Event data={e} key={e.id} deleteEvent={HandleDelete} />;
+            return <Event data={e} key={e.id} deleteEvent={HandleDelete} year={e.year} />;
           })}
         </div>
       </div>

@@ -1,16 +1,21 @@
-
-import React, {  useRef } from "react";
-import '../Events/Events.css'
+import React, { useRef } from "react";
+import "../Events/Events.css";
 export default function Modal(props) {
-
-    const{image,title,loading,handleChange,handleClick,handleFile,CreateUpload,refClose,event}=props;
-    
- 
-   
+  const {
+    image,
+    title,
+    loading,
+    handleChange,
+    handleClick,
+    handleFile,
+    CreateUpload,
+    refClose,
+    event,
+  } = props;
 
   return (
     <>
-          <button
+      <button
         type="button"
         className="btn btn-primary"
         data-bs-toggle="modal"
@@ -42,7 +47,7 @@ export default function Modal(props) {
             <form>
               <div className="modal-body">
                 <label htmlFor="name" className="form-label">
-                  EVENT details
+                  {props.name}
                 </label>
                 <input
                   type="text"
@@ -53,7 +58,7 @@ export default function Modal(props) {
                   minLength={3}
                   required
                 />
-                <label htmlFor="post">Event description</label>
+                <label htmlFor="post">{props.description}</label>
                 <textarea
                   name="description"
                   className="form-control"
@@ -62,23 +67,36 @@ export default function Modal(props) {
                   minLength={3}
                   required
                 />
-                  {props.forbod==1? 
-                <> 
-                  <label htmlFor="post">Year</label>
-                <div class="input-group mb-3">
-  <select class="custom-select" id="inputGroupSelect02">
-    <option selected>Choose...</option>
-    <option value="1">{new Date().getFullYear()}</option>
-    <option value="2">{new Date().getFullYear()-1}</option>
-    <option value="3">{new Date().getFullYear()-2}</option>
-  </select>
-  <div class="input-group-append">
-    
-  </div>
-</div>
-                </> :null}
-              
-             
+                {props.forbod == 1 ? (
+                  <>
+                  <label htmlFor="name" className="form-label">
+                  Post/Title
+                </label>
+                <input
+                  type="text"
+                  onChange={handleChange}
+                  className="form-control"
+                  name="post"
+                  id="post"
+                  minLength={3}
+                  required
+                />
+                    <label htmlFor="post">Year</label>
+                    <div class="input-group mb-3">
+                      <select onChange={handleChange} name="year"  class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value={new Date().getFullYear()}>{new Date().getFullYear()}</option>
+                        <option value={(new Date().getFullYear() - 1)}>
+                          {(new Date().getFullYear() - 1)}
+                        </option>
+                        <option value= {new Date().getFullYear() - 2}>
+                          {new Date().getFullYear() - 2}
+                        </option>
+                      </select>
+                      <div class="input-group-append"></div>
+                    </div>
+                  </>
+                ) : null}
 
                 <label htmlFor="post">Input file</label>
                 <input
@@ -113,8 +131,8 @@ export default function Modal(props) {
                 disabled={
                   loading === true ||
                   props.testimage === 0 ||
-                  props.testlength < 5||
-                  title.name.length < 2
+                  props.testlength < 5 ||
+                  title.testtitle < 2
                 }
               >
                 Save changes
@@ -124,5 +142,5 @@ export default function Modal(props) {
         </div>
       </div>
     </>
-  )
+  );
 }

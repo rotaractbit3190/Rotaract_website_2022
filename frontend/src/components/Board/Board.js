@@ -2,21 +2,23 @@ import '../Events/Events.css'
 import Modal from '../modal/Modal'
 import React, { useEffect, useState, useRef } from "react";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import Boardmembers from './Boardmembers';
 export default function Board() {
-  const [title, settitle] = useState({ title: "", description: "",year:"" });
+  const [title, settitle] = useState({ title: "", description: "",year:"",post:""});
   const [image, setimage] = useState("");
   const [loading, setloading] = useState(false);
   const refClose = useRef();
   const initial = [];
   const [content, setcontent] = useState(initial);
-  // useEffect(() => {
-  //   GetAllData();
+  useEffect(() => {
+    GetAllData();
 
-  //   // eslint-disable-next-line
-  // }, []);
+    // eslint-disable-next-line
+  }, []);
 
   const handleChange = (e) => {
     settitle({ ...title, [e.target.name]: e.target.value });
+    console.log(title)
   };
 
   const handleFile = (e) => {
@@ -47,14 +49,16 @@ export default function Board() {
   };
 
   const host = "http://localhost:5000";
-
+  const currentyear=new Date().getFullYear()
   const GetAllData = async (e) => {
-    const response = await fetch(`${host}/Events/getalldata`, {
+    
+    const response = await fetch(`${host}/rotaract/getallbod/${currentyear}`, {
       method: "GET",
       //   real
       headers: {
         "Content-Type": "application/json",
       },
+    
     });
 
     const json = await response.json();
@@ -89,13 +93,17 @@ export default function Board() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name:title.name,
+        post:title.post,
         title: title.title,
         description: title.description,
         image: image,
         year:title.year
       }),
-    });
+     
+    }
+
+    );
+    console.log(title.year)
 
     const json = await response.json();
 
@@ -125,10 +133,20 @@ export default function Board() {
         testlength={title.description.length}
         testtitle={title.title.length}
         title={title}
+        descriptionbod={title.description}
         loading={loading}
         year={title.year}
-        event={"Add an event"}
+        event={"Add an member"}
+        name={"Name of the Member"}
+        description={"Enter the description"}
       />
+       <div className="flex-box">
+          {content.map((e) => {
+            return <Boardmembers data={e} key={e.id} deleteEvent={HandleDelete} />;
+          })}
+        </div>
+
+
       </div>
     </>
   )

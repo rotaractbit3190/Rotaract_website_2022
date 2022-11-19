@@ -39,9 +39,10 @@
     font-family: 'Times New Roman', Times, serif;
 }
 .card-description{
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 7vw;
-    padding-right: 40px;
+    padding-right: 7vw;
+  
     font-size:20px;
     font-family: "Open Sans", sans-serif;
     color: white;
@@ -52,4 +53,16 @@
 }
 .try{
     color: antiquewhite;
+}
+
+@media  screen and (max-width:961px) {
+    .event-image{
+        padding-top: 30px;
+        width: 76vw;
+        height: 16rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
