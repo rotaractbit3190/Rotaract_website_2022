@@ -18,13 +18,15 @@ export default function Boardmembers(props) {
               className="image-for-bod"
               
             /></div>
-            <div>dd</div>
+            <div className="Bod-name">Akash Uday</div>
+            <div className="bod-post">Web Designer </div>
+         
            
           </div>
           <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
+           
+            <p className="quote-class">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione voluptatum id quidem sunt laudantium quisquam quibusdam hic ex? Vero harum hic placeat illo saepe veniam quas quia adipisci alias sunt."</p>
+            
           </div>
         </div>
       </div>
