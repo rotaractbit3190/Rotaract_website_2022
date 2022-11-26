@@ -1,0 +1,24 @@
+.main-parent {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.child-parent {
+  height: 10rem;
+  margin-right: 9rem;
+}
+.child-parent-1 {
+  height: 13rem;
+}
+.main-one {
+  height: 100px;
+  margin: 100px 0px 0px 70px;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  text-shadow: rgb(255 215 77 / 60%) -1px -1px 6px,
+    rgb(124 127 255 / 60%) 1px 1px 6px;
+
+  color: white;
+}

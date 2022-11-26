@@ -11,12 +11,15 @@ export default function Modal(props) {
     CreateUpload,
     refClose,
     event,
+    refopen,
+    year
   } = props;
 
   return (
     <>
       <button
         type="button"
+        ref={refopen}
         className="btn btn-primary"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
@@ -69,32 +72,54 @@ export default function Modal(props) {
                 />
                 {props.forbod == 1 ? (
                   <>
-                  <label htmlFor="name" className="form-label">
-                  Post/Title
-                </label>
-                <input
-                  type="text"
-                  onChange={handleChange}
-                  className="form-control"
-                  name="post"
-                  id="post"
-                  minLength={3}
-                  required
-                />
-                    <label htmlFor="post">Year</label>
+                    <label htmlFor="name" className="form-label">
+                      Post/Title
+                    </label>
+                    <input
+                      type="text"
+                      onChange={handleChange}
+                      className="form-control"
+                      name="post"
+                      id="post"
+                      minLength={3}
+                      required
+                    />
+                    <label htmlFor="name" className="form-label">
+                     year
+                    </label>
+                    <input
+                      type="text"
+                      onChange={handleChange}
+                      className="form-control"
+                      name="year"
+                      id="year"
+                      minLength={3}
+                      required
+                    />
+
+
+
+                    {/* <label htmlFor="post">Year</label>
                     <div class="input-group mb-3">
-                      <select onChange={handleChange} name="year"  class="custom-select" id="inputGroupSelect02">
+                      <select
+                        onChange={handleChange}
+                        name="year"
+                        class="custom-select"
+                        id="inputGroupSelect02"
+                      >
                         <option selected>Choose...</option>
-                        <option value={new Date().getFullYear()}>{new Date().getFullYear()}</option>
-                        <option value={(new Date().getFullYear() - 1)}>
-                          {(new Date().getFullYear() - 1)}
+                        <option value={new Date().getFullYear()}>
+                          {new Date().getFullYear()}
                         </option>
-                        <option value= {new Date().getFullYear() - 2}>
+                        <option value={new Date().getFullYear() - 1}>
+                          {new Date().getFullYear() - 1}
+                        </option>
+                        <option value={new Date().getFullYear() - 2}>
                           {new Date().getFullYear() - 2}
                         </option>
                       </select>
                       <div class="input-group-append"></div>
-                    </div>
+                    </div> */}
                   </>
                 ) : null}
 
@@ -124,6 +149,7 @@ export default function Modal(props) {
               >
                 Close
               </button>
+              {props.for}
               <button
                 type="submit"
                 className="btn btn-primary"

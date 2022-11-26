@@ -1,0 +1,19 @@
+/* .for-carousel {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.the-pic-x{
+    height: 30%;
+    width: 40%;
+
+}
+.carousel-item{
+
+    display: flex;
+}
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex;
+}

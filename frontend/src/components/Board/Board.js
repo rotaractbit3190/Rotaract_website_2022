@@ -2,19 +2,23 @@ import "../Events/Events.css";
 import "./Board.css";
 import Modal from "../modal/Modal";
 import React, { useEffect, useState, useRef } from "react";
+
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Boardmembers from "./Boardmembers";
 import InfiniteScroll from "react-infinite-scroll-component";
+import UpdateCard from "./UpdateCard";
 export default function Board() {
   const [title, settitle] = useState({
     title: "",
     description: "",
     year: "",
     post: "",
+    id:""
   });
   const [image, setimage] = useState("");
   const [loading, setloading] = useState(false);
   const refClose = useRef();
+  const ref1 = useRef(null);
   const initial = [];
   const [content, setcontent] = useState(initial);
   useEffect(() => {
@@ -90,17 +94,59 @@ export default function Board() {
       console.log("not foundd");
     }
   };
-  const HandleDelete = async (id, collectionname) => {
-    const response = await fetch(
-      `${host}/rotaract/deleteEvents/${id}/${collectionname}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
+  const updateNote = (random) => {
+    ref1.current.click();
+    // console.log(random._id)
+    settitle({
+      post: random.post,
+      title: random.title,
+      description: random.description,
+      image: random.image,
+      year: random.year,
+      id:random.id
+    });
+
+    // console.log(note.id)
+  };
+  const editNote = async (id) => {
+    const response = await fetch(`${host}/rotaract/update/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        // "auth-token":
+        //  localStorage.getItem('token'),
+      },
+      body: JSON.stringify({
+        post: title.post,
+        title: title.title,
+        description: title.description,
+        image: image,
+        year: title.year,
+      }), // body data type must match "Content-Type" header
+    });
+    const json = await response.json();
+    console.log(json); // parses JSON response into native JavaScript objects
+
+    let newcard = JSON.parse(JSON.stringify(content));
+    for (let index = 0; index < newcard.length; index++) {
+      const element = newcard[index];
+      if (element._id === id) {
+        element.title = title.title;
+        element.description = title.description;
+       
       }
-    );
+      setcontent(newcard);
+    }
+  };
+  const HandleDelete = async (id, year) => {
+    const response = await fetch(`${host}/rotaract/delete/${id}/${year}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     await response.json();
+    console.log(`${host}/rotaract/delete/${id}/${year}`)
     const sort = content.filter((e) => {
       return e.id !== id;
     });
@@ -117,7 +163,7 @@ export default function Board() {
       body: JSON.stringify({
         post: title.post,
         title: title.title,
-        description: title.description,
+      description:title.description,
         image: image,
         year: title.year,
       }),
@@ -137,6 +183,7 @@ export default function Board() {
     <>
       <div className="card-start">
         <div className="Our-Board">Board Members</div>
+       
         <Modal
           handleChange={handleChange}
           handleFile={handleFile}
@@ -150,12 +197,28 @@ export default function Board() {
           testlength={title.description.length}
           testtitle={title.title.length}
           title={title}
+         
           descriptionbod={title.description}
           loading={loading}
           year={title.year}
           event={"Add an member"}
           name={"Name of the Member"}
           description={"Enter the description"}
+        />
+ <UpdateCard
+          handleChange={handleChange}
+          handleFile={handleFile}
+          CreateUpload={CreateUpload}
+          refopen={ref1}
+          handleClick={handleClick}
+          image={image}
+          editNote ={ editNote }
+          testimage={image.length}
+          testlength={title.description.length}
+          testtitle={title.title.length}
+          title={title}
+          descriptionbod={title.description}
+          loading={loading}
         />
         <div className="flex-test">
           <InfiniteScroll
@@ -178,7 +241,12 @@ export default function Board() {
           >
             {content.map((e) => {
               return (
-                <Boardmembers data={e} key={e.id} deleteEvent={HandleDelete} />
+                <Boardmembers
+                  data={e}
+                  key={e.id}
+                  updateNote={updateNote}
+                  deleteEvent={HandleDelete}
+                />
               );
             })}
           </InfiniteScroll>

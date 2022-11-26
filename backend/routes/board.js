@@ -11,82 +11,81 @@ const {
 
 const db = getFirestore();
 
-
-
-
 router.get(
   "/getallbod/:year",
-  
 
   async (req, res) => {
-    const theyear=req.params.year;
-    try{
+    const theyear = req.params.year;
+    try {
       const citiesRef = db.collection(`${theyear}`);
       const snapshot = await citiesRef.get();
-      const data= snapshot.docs.map((doc)=>({id:doc.id,...doc.data()}))
-      res.json(data)
+      const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      res.json(data);
       // res.json(alldata)
-
-    }catch(err){
-      console.log(err.message)
-
+    } catch (err) {
+      console.log(err.message);
     }
-    
   }
 );
 
-router.post('/adddata',async(req,res)=>{
-    const {post, title, image,year,description } = req.body;
-    const projects = db.collection(`${year}`);
-    try{
-        await projects.add({
-            post: post,
-            title: title,
-            image: image,
-            description:description
-          });
-          res.status(200).send({ msg: "sucessfully sent " });
-      
-    }catch(e){
-        console.log(e)
-        res.status(500).send({ error: e.message });
-    }
-
-
-})
+router.post("/adddata", async (req, res) => {
+  const { post, title, image, year, description } = req.body;
+  const projects = db.collection(year);
+  console.log(year);
+  try {
+    await projects.add({
+      test: { post: post, title: title, description: description, year: year },
+    });
+    res.status(200).send({ msg: "sucessfully sent " });
+  } catch (e) {
+    console.log(e);
+    res.status(500).send({ error: e.message });
+  }
+});
 
 router.delete("/delete/:id/:collectionname", async (req, res) => {
-    
-    try {
-      const projects = db.collection(`${req.params.collectionname}`);
-  
-      const cardcheck = await projects.doc(req.params.id).delete();
-      if (!cardcheck) {
-        return res.status(404).send("not found");
-      }
-      res.send({ msg: "done" });
-    } catch (e) {
-      res.status(500).send({ error: e.message });
-    }
-  });
-router.put("/update/:id/", async (req, res) => {
-    
-    try {
-      const projects = db.collection(`${req.params.collectionname}`);
-      const {name, title, image,year,description } = req.body;
-      const info={}
-      if(title){`${req.params.collectionname.title=title}`}
-      if(description){`${req.params.collectionname.description=description}`}
-      if(image){`${req.params.collectionname.image=image}`}
-      if(year){`${req.params.collectionname.year=year}`}
-      if(name){`${req.params.collectionname.name=name}`}
-      await Cards.doc(req.params.id).update(`${req.params.collectionname}`)
-        res.send({msg:"done"})
-        
-      
-    } catch (e) {
-      res.status(500).send({ error: e.message });
-    }
-  });
+  try {
+    const projects = db.collection(`${req.params.collectionname}`);
+    console.log(req.params.collectionname);
+    console.log(req.params.id);
 
-module.exports=router;
+    const cardcheck = await projects.doc(req.params.id).delete();
+    if (!cardcheck) {
+      return res.status(404).send("not found");
+    }
+
+    res.send({ msg: `${req.params.collectionname}` });
+  } catch (e) {
+    res.status(500).send({ error: e.message });
+  }
+});
+router.put("/update/:id", async (req, res) => {
+  const { post, title, description, image, year } = req.body;
+
+  try {
+    console.log("we in");
+
+    const projects = db.collection(`${year}`);
+
+    const info = {};
+    if (title) {
+      `${(title = post)}`;
+    }
+    if (description) {
+      `${(description = description)}`;
+    }
+    if (image) {
+      `${(image = image)}`;
+    }
+    if (year) {
+      `${(year = year)}`;
+    }
+
+    await projects.doc(req.params.id).update(`${year}`);
+    res.send({ msg: "done" });
+  } catch (e) {
+    res.status(500).send({ error: e.message });
+  }
+});
+
+module.exports = router;
