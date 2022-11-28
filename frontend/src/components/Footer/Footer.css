@@ -27,7 +27,7 @@
     
 } */
 .spacing{
-    padding-left: 40px;
+    margin-left: 40px;
 }
 .copyrights{
     color: aliceblue;
@@ -42,5 +42,7 @@
         text-align: center;
         padding-bottom: 200px
     }
-    
+    .spacing{
+        margin-left: 30px;
+    }
 }

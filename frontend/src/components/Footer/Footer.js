@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { GoMail } from "react-icons/go";
 export default function Footer() {
   return (
     <>
@@ -10,6 +11,7 @@ export default function Footer() {
             <BsInstagram color="white" size={"40px"} className="spacing" />
             <BsFacebook color="white" size={"40px"} className="spacing" />
             <BsLinkedin color="white" size={"40px"} className="spacing" />
+            <GoMail color="white" size={"40px"} className="spacing" />
           </div>
         </div>
         <div className="copyrights">

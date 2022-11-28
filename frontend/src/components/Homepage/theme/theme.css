@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+.sub-text {
+  font-family: "Poppins", sans-serif;
+  margin-left: 4.7rem;
+  color: white;
+  text-shadow: 5px 3px #6835b6;
+  font-size: 1.6rem;
+}
+.sub-sub-classname {
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 900px) {
+  .sub-text {
+    font-family: "Poppins", sans-serif;
+    margin-left: 3.1rem;
+    color: white;
+    text-shadow: 5px 3px #6835b6;
+    font-size: 1rem;
+  }
+  .sub-sub-classname {
+    font-size: 1.4rem;
+  }
+}

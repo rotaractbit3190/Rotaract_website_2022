@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 import logo from "./logo.png";
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
-import thelogo from './logorotaract.png'
+import thelogo from "./logorotaract.png";
+import Divider from "../Homepage/divider/Divider";
+import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { GoMail } from "react-icons/go";
 export default function NavBar(props) {
   const [sidebar, setsidebar] = useState(false);
 
-
   const handleClick = () => {
     setsidebar(true);
-    props.showcursor(false)
+    props.showcursor(false);
   };
   const gotop = () => {
     setsidebar(false);
@@ -19,8 +21,7 @@ export default function NavBar(props) {
   };
   const closeClick = () => {
     setsidebar(false);
-    props.showcursor(true)
-   
+    props.showcursor(true);
   };
   return (
     <nav>
@@ -43,19 +44,22 @@ export default function NavBar(props) {
               <Link to="Board">Board</Link>
             </li>
             <li>
-              <Link >Contact</Link>
+              <Link>Contact</Link>
             </li>
             <li>
-              <Link to='www.google.com'>Join Us</Link>
+              <Link to="www.google.com">Join Us</Link>
             </li>
           </ul>
         </div>
         {sidebar ? (
           <div className="reactive-header">
             <div className="popout-logo-start">
-              <center> <img src={ thelogo } alt="" className=" popout-logo-start-img" /></center>
-             
+              <center>
+                {" "}
+                <img src={thelogo} alt="" className=" popout-logo-start-img" />
+              </center>
             </div>
+            <Divider />
             <div className="reactive-header-tags">
               <li className="border-trial">
                 <Link to="/" className="header-li" onClick={gotop}>
@@ -77,13 +81,18 @@ export default function NavBar(props) {
                   Contact Us
                 </Link>
               </li>
-             
+              <div className="sociala">
+                <BsInstagram color="white" size={"30px"} className="spacing" />
+                <BsFacebook color="white" size={"30px"} className="spacing" />
+                <BsLinkedin color="white" size={"30px"} className="spacing" />
+                <GoMail color="white" size={"36px"} className="spacing" />
+              </div>
             </div>
           </div>
         ) : null}
-         {sidebar ? (
-            <div className="background-drawer" onClick={closeClick}></div>
-          ) : null}
+        {sidebar ? (
+          <div className="background-drawer" onClick={closeClick}></div>
+        ) : null}
       </div>
     </nav>
   );

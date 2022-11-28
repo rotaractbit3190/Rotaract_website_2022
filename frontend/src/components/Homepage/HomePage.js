@@ -4,6 +4,7 @@ import Heading from './header/Backgroundlogo'
 import ParentClubs from './header/Our parent clubs/ParentClubs'
 import PrincipalPic from './header/principal picture/PrincipalPic'
 import MainPageBoard from './OurBoard/MainPageBoard'
+import Theme from './theme/theme'
 
 
 export default function HomePage(props) {
@@ -13,6 +14,7 @@ export default function HomePage(props) {
     <PrincipalPic/>
     {/* <Divider/> */}
     <ParentClubs/>
+    <Theme/>
     <MainPageBoard/>
     </>
     

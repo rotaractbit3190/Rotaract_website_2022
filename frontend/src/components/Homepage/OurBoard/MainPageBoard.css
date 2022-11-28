@@ -5,15 +5,36 @@
   align-items: center;
   justify-content: center;
 } */
-.the-pic-x{
-    height: 30%;
-    width: 40%;
-
+.the-pic-x {
+  height: 30%;
+  width: 40%;
 }
-.carousel-item{
-
-    display: flex;
+.carousel-item {
+  display: flex;
 }
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
-    display: flex;
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+
+.changes-cor{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-transform: none;
+}
+
+.changes-cor::before{
+  content: '';
+  background-image: url('./grunge-black-concrete-textured-background_53876-124541.webp');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 20%;
+  top: 127rem;
+  width: 66%;
+  height: 100%;
+  z-index: -1000;
+  overflow: hidden;
+  opacity: 0.3;
 }
