@@ -44,7 +44,7 @@ export default function NavBar(props) {
               <Link to="Board">Board</Link>
             </li>
             <li>
-              <Link>Contact</Link>
+              <Link to="/ContactUs">Contact</Link>
             </li>
             <li>
               <Link to="www.google.com">Join Us</Link>
@@ -77,7 +77,7 @@ export default function NavBar(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/Contact" className="header-li" onClick={gotop}>
+                <Link to="/ContactUs" className="header-li" onClick={gotop}>
                   Contact Us
                 </Link>
               </li>

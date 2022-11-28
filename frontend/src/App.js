@@ -11,6 +11,7 @@ import Login from "./components/login/Login";
 import Board from "./components/Board/Board";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Events from "./components/Events/Events";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 export default function App() {
   const [checkcursor, setcheckcursor] = useState(true)
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/Board" element={<Board/>} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/Events" element={<Events />} />
+            <Route path="/ContactUs" element={<ContactUs/>} />
           </Routes>
         </Suspense>
         <Footer/>
