@@ -1,11 +1,12 @@
 import React from "react";
 import { BiPencil } from "react-icons/bi";
 import { BsFillTrashFill } from "react-icons/bs";
+import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 import "./Board.css";
 import tempimg from './Akash.jpg'
 export default function Boardmembers(props) {
   const HandleDelete = () => {
-    props.deleteEvent(props.data.id, props.data.year);
+    props.deleteEvent(props.data.id, props.data.test.year);
   };
   
   const HandleUpdate=()=>{
@@ -24,14 +25,20 @@ export default function Boardmembers(props) {
               className="image-for-bod"
               
             /></div>
-            <div className="Bod-name">{props.data.title}</div>
-            <div className="bod-post">Web Designer </div>
+            {props.data.test.title? <div className="Bod-name">{props.data.test.title}</div>:null}
+           
+            <div className="bod-post">{props.data.test.post} </div>
+            <div className="bod-socials"> <BsInstagram color="white" size={"40px"} className="spacing" />
+            <BsLinkedin color="white" size={"40px"} className="spacing" /></div>
+           
+
          
            
           </div>
           <div class="flip-card-back">
            
-            <p className="quote-class">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione voluptatum id quidem sunt laudantium quisquam quibusdam hic ex? Vero harum hic placeat illo saepe veniam quas quia adipisci alias sunt."</p>
+            <p className="quote-class">{props.data.test.description}</p>
+            
             <BiPencil size="2rem" className="try" onClick={HandleUpdate} />
             <BsFillTrashFill size="2rem" className="try" onClick={HandleDelete} />
            

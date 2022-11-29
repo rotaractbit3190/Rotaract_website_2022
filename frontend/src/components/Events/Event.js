@@ -16,7 +16,7 @@ const Event = (props) => {
             <img src={image} alt="theevent"  className="image-card" />
         </div></center>
        
-        <div className="card-description">{description}</div>
+        <div className="card-description The-text">{description}</div>
         <BiPencil size="2rem" className="try" onClick={handleClick} />
     </div>
   );

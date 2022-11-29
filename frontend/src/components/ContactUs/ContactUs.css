@@ -33,7 +33,7 @@
 
 .The-text{
     display: flex;
-    margin-top: 0;
+    
 }
 .for-the-p{
     margin-top: 30px;
@@ -46,6 +46,7 @@ a{
 .check-check{
     padding: 0;
     margin-left: 30px;
+    margin-top: 0;
 }
 .the-real-names{
 

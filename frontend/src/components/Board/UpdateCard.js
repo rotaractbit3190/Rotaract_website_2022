@@ -96,7 +96,7 @@ export default function UpdateCard(props) {
                     <label htmlFor="post">Year</label>
                     <div class="input-group mb-3">
                       <select onChange={handleChange} name="year"  class="custom-select" id="inputGroupSelect02">
-                        <option selected>Choose...</option>
+                        <option defaultValue>Choose...</option>
                         <option value={new Date().getFullYear()}>{new Date().getFullYear()}</option>
                         <option value={(new Date().getFullYear() - 1)}>
                           {(new Date().getFullYear() - 1)}

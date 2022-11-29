@@ -109,3 +109,28 @@
   margin-bottom: 100px;
 
 }
+.bod-socials{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+@media screen and (max-width:961px){
+  .Our-Board{
+    font-size: 4rem
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 266px;
+    height: 365px;
+    perspective: 1000px;
+    padding-bottom: 40px;
+}
+.card-outer {
+  padding-left: 40px;
+  justify-content: center;
+  align-items: center;
+  display: contents;
+}
+}

@@ -2,10 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Event from "./Event";
 import Modal from "../modal/Modal";
-export default function Events() {
+
+export default function Events(props) {
   const [title, settitle] = useState({ title: "", description: "" });
   const [image, setimage] = useState("");
-  const [loading, setloading] = useState(false);
+
+  const [miniloader, setminiloader] = useState(false)
   const refClose = useRef();
   const initial = [];
   const [content, setcontent] = useState(initial);
@@ -26,6 +28,7 @@ export default function Events() {
   };
 
   const CreateUpload = (e) => {
+    setminiloader(true)
     e.preventDefault();
     try {
       const storage = getStorage();
@@ -39,7 +42,7 @@ export default function Events() {
           console.log("2")
         });
 
-        // setloading(false);
+        setminiloader(false)
       });
     } catch (e) {
       console.log(e);
@@ -49,6 +52,7 @@ export default function Events() {
   const host = "http://localhost:5000";
 
   const GetAllData = async (e) => {
+    props.loader(true)
     const response = await fetch(`${host}/Events/getalldata`, {
       method: "GET",
       //   real
@@ -64,8 +68,9 @@ export default function Events() {
       ReverseArray.push(json[i]);
     }
 
-    setcontent(ReverseArray);
+    setcontent(json);
     console.log(ReverseArray);
+    props.loader(false)
   };
   const HandleDelete = async (id) => {
     const response = await fetch(`${host}/Events/deleteEvents/${id}`, {
@@ -117,6 +122,7 @@ export default function Events() {
     
      
       <div className="card-start">
+        
       <Modal
         handleChange={handleChange}
         handleFile={handleFile}
@@ -129,12 +135,13 @@ export default function Events() {
         testlength={title.description.length}
         testtitle={title.title.length}
         title={title}
-        loading={loading}
+        loading={miniloader}
         event={"Add an event"}
         name={"Event Name"}
         description={"Event Description"}
         
       />
+      
         <div className="flex-box">
           {content.map((e) => {
             return <Event data={e} key={e.id} deleteEvent={HandleDelete} year={e.year} />;

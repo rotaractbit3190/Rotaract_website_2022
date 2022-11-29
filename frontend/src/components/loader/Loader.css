@@ -1,0 +1,11 @@
+.image-loader{
+    height: 100%;
+    width: 100%;
+}
+.main-loader{
+    height: 20rem;
+    width: 30rem;
+}
+.start-loader{
+    margin-top: 20rem;
+}

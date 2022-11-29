@@ -13,7 +13,9 @@ export default function Board() {
     description: "",
     year: "",
     post: "",
-    id:""
+    id: "",
+    instagram: "",
+    linkedin: "",
   });
   const [image, setimage] = useState("");
   const [loading, setloading] = useState(false);
@@ -103,7 +105,7 @@ export default function Board() {
       description: random.description,
       image: random.image,
       year: random.year,
-      id:random.id
+      id: random.id,
     });
 
     // console.log(note.id)
@@ -133,7 +135,6 @@ export default function Board() {
       if (element._id === id) {
         element.title = title.title;
         element.description = title.description;
-       
       }
       setcontent(newcard);
     }
@@ -146,7 +147,7 @@ export default function Board() {
       },
     });
     await response.json();
-    console.log(`${host}/rotaract/delete/${id}/${year}`)
+    console.log(`${host}/rotaract/delete/${id}/${year}`);
     const sort = content.filter((e) => {
       return e.id !== id;
     });
@@ -163,9 +164,11 @@ export default function Board() {
       body: JSON.stringify({
         post: title.post,
         title: title.title,
-      description:title.description,
+        description: title.description,
         image: image,
         year: title.year,
+        instagram: title.instagram,
+        linkedin: title.linkedin,
       }),
     });
     console.log(title.year);
@@ -183,7 +186,7 @@ export default function Board() {
     <>
       <div className="card-start">
         <div className="Our-Board">Board Members</div>
-       
+
         <Modal
           handleChange={handleChange}
           handleFile={handleFile}
@@ -197,7 +200,6 @@ export default function Board() {
           testlength={title.description.length}
           testtitle={title.title.length}
           title={title}
-         
           descriptionbod={title.description}
           loading={loading}
           year={title.year}
@@ -205,14 +207,14 @@ export default function Board() {
           name={"Name of the Member"}
           description={"Enter the description"}
         />
- <UpdateCard
+        <UpdateCard
           handleChange={handleChange}
           handleFile={handleFile}
           CreateUpload={CreateUpload}
           refopen={ref1}
           handleClick={handleClick}
           image={image}
-          editNote ={ editNote }
+          editNote={editNote}
           testimage={image.length}
           testlength={title.description.length}
           testtitle={title.title.length}
@@ -234,7 +236,7 @@ export default function Board() {
                 <img
                   src="https://media4.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif?cid=790b7611a667d7fcd301051b1f218cbc69d76e5eaad2334a&rid=giphy.gif&ct=g"
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
               </div>
             }

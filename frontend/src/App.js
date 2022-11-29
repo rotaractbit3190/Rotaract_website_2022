@@ -12,25 +12,32 @@ import Board from "./components/Board/Board";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Events from "./components/Events/Events";
 import ContactUs from "./components/ContactUs/ContactUs";
+import Loader from "./components/loader/Loader";
 
 export default function App() {
   const [checkcursor, setcheckcursor] = useState(true)
+  const [loader, setloader] = useState(false)
   const checkcursors=(e)=>{
     setcheckcursor(e)
     console.log(e)
 
   }
+  const setLoading=(isloading)=>{
+    setloader(isloading)
+  }
+  
   return (
     <>
       <Router>
         <Suspense>
           <NavBar showcursor={checkcursors}/>
+          <Loader setloader={loader}/>
           <Routes>
             <Route path="/" element={<HomePage nocursor={checkcursor} />} />
             <Route path="/login" element={<Login />} />
             <Route path="/Board" element={<Board/>} />
             <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/Events" element={<Events />} />
+            <Route path="/Events" element={<Events loader={setLoading} />} />
             <Route path="/ContactUs" element={<ContactUs/>} />
           </Routes>
         </Suspense>

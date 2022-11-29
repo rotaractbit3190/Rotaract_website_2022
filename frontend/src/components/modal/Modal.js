@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import "../Events/Events.css";
+import Loader from "../loader/Loader";
 export default function Modal(props) {
   const {
-    image,
+    
     title,
     loading,
     handleChange,
@@ -12,9 +13,9 @@ export default function Modal(props) {
     refClose,
     event,
     refopen,
-    year
+  
   } = props;
-
+  // const [loading, setloading] = useState(false)
   return (
     <>
       <button
@@ -70,7 +71,7 @@ export default function Modal(props) {
                   minLength={3}
                   required
                 />
-                {props.forbod == 1 ? (
+                {props.forbod === 1 ? (
                   <>
                     <label htmlFor="name" className="form-label">
                       Post/Title
@@ -85,7 +86,7 @@ export default function Modal(props) {
                       required
                     />
                     <label htmlFor="name" className="form-label">
-                     year
+                      year
                     </label>
                     <input
                       type="text"
@@ -96,8 +97,30 @@ export default function Modal(props) {
                       minLength={3}
                       required
                     />
-
-
+                    <label htmlFor="instagram" className="form-label">
+                      Instagram 
+                    </label>
+                    <input
+                      type="text"
+                      onChange={handleChange}
+                      className="form-control"
+                      name="instagram"
+                      id="instagram"
+                      minLength={3}
+                      required
+                    />
+                    <label htmlFor="linkedin" className="form-label">
+                      Linkedin
+                    </label>
+                    <input
+                      type="text"
+                      onChange={handleChange}
+                      className="form-control"
+                      name="linkedin"
+                      id="linkedin"
+                      minLength={3}
+                      required
+                    />
 
                     {/* <label htmlFor="post">Year</label>
                     <div class="input-group mb-3">
@@ -136,6 +159,11 @@ export default function Modal(props) {
                 />
                 <div>
                   <button onClick={CreateUpload}>Upload</button>
+
+                  <div className="maintainsize">
+                    <Loader setloader={loading} />
+                  </div>
+
                   {/* <Loader isloading={loading} /> */}
                 </div>
               </div>

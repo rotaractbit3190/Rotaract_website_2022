@@ -1,6 +1,6 @@
 import React from "react";
 import "./heading.css";
-import Deer from "./deer.png";
+
 import ReactTypingEffect from "react-typing-effect";
 
 function heading(props) {

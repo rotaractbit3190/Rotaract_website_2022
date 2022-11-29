@@ -6,9 +6,15 @@
   color: white;
   text-shadow: 5px 3px #6835b6;
   font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+.for-main-eve{
+  padding-bottom: 50px;
 }
 .sub-sub-classname {
   font-size: 1.7rem;
+  margin-top: 30px;
+  
 }
 
 @media screen and (max-width: 900px) {

@@ -6,7 +6,7 @@
    
     width: 100%;
     height:300px;
-    margin-top: 50rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,6 +14,17 @@
     padding-bottom: 20px;
     
     
+}
+.containment-pic{
+    width: 100%;
+    height: 100%;
+
+}
+.containment{
+    
+    width: 20rem;
+    margin-bottom: 50px;
+
 }
 
 .Footer-main{

@@ -1,5 +1,5 @@
 import React from 'react'
-import Divider from './divider/Divider'
+
 import Heading from './header/Backgroundlogo'
 import ParentClubs from './header/Our parent clubs/ParentClubs'
 import PrincipalPic from './header/principal picture/PrincipalPic'
@@ -12,7 +12,7 @@ export default function HomePage(props) {
     <>
     <Heading check={props.nocursor}/>
     <PrincipalPic/>
-    {/* <Divider/> */}
+
     <ParentClubs/>
     <Theme/>
     <MainPageBoard/>
