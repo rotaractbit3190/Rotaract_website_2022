@@ -29,12 +29,21 @@ router.get(
 );
 
 router.post("/adddata", async (req, res) => {
-  const { post, title, image, year, description,instagram,linkedin } = req.body;
+  const { post, title, image, year, description, instagram, linkedin } =
+    req.body;
   const projects = db.collection(year);
   console.log(year);
   try {
     await projects.add({
-      test: { post: post, title: title, description: description, year: year,linkedin:linkedin,instagram:instagram },
+      test: {
+        post: post,
+        title: title,
+        description: description,
+        year: year,
+        linkedin: linkedin,
+        instagram: instagram,
+        image:image
+      },
     });
     res.status(200).send({ msg: "sucessfully sent " });
   } catch (e) {

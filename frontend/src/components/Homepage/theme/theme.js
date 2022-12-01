@@ -12,6 +12,10 @@ export default function Theme() {
     <>
       <div className="main-one ">Theme for the year 2022-2023</div>
       <div className="sub-text" data-aos="slide-up">SPRINT STRONG STAG</div>
+      <div className="youtube">
+        <center><iframe className="youtube-iou" width="700" height="500" src="https://www.youtube-nocookie.com/embed/CLa9kTz24hA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      
+      </div>
       <div className="main-align">
         <div className="The-text for-main-eve" data-aos="fade-right">
           We, the team of Rotaract Club of Bangalore B.I.T. have decided the

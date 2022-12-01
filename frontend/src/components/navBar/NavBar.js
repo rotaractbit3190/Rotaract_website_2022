@@ -47,7 +47,7 @@ export default function NavBar(props) {
               <Link to="/ContactUs">Contact</Link>
             </li>
             <li>
-              <Link to="www.google.com">Join Us</Link>
+              <a href="https://forms.gle/MzbJ6ZP2XySagU1E8">Join Us</a>
             </li>
           </ul>
         </div>
@@ -80,6 +80,11 @@ export default function NavBar(props) {
                 <Link to="/ContactUs" className="header-li" onClick={gotop}>
                   Contact Us
                 </Link>
+              </li>
+              <li>
+                <a href="https://forms.gle/MzbJ6ZP2XySagU1E8" className="header-li" onClick={gotop}>
+                  Contact Us
+                </a>
               </li>
               <div className="sociala">
                 <BsInstagram color="white" size={"30px"} className="spacing" />

@@ -16,40 +16,42 @@ export default function Boardmembers(props) {
   }
   return (
     <div className="card-outer">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div className="image-for-div"> <img
-              src={tempimg}
-              alt="Avatar"
-              className="image-for-bod"
-              
-            /></div>
-            {props.data.test.title? <div className="Bod-name">{props.data.test.title}</div>:null}
-           
-            <div className="bod-post">{props.data.test.post} </div>
-            <div className="bod-socials"> <BsInstagram color="white" size={"40px"} className="spacing" />
-            <BsLinkedin color="white" size={"40px"} className="spacing" /></div>
-           
-
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div className="image-for-div"> <img
+            src={props.data.test}
+            alt="Avatar"
+            className="image-for-bod"
+            
+          /></div>
+         <div className="Bod-name">{props.data.title}</div>
          
-           
-          </div>
-          <div class="flip-card-back">
-           
-            <p className="quote-class">{props.data.test.description}</p>
-            
-            <BiPencil size="2rem" className="try" onClick={HandleUpdate} />
-            <BsFillTrashFill size="2rem" className="try" onClick={HandleDelete} />
-           
-            
-          </div>
+          <div className="bod-post">{props.data.test.post} </div>
+          <div className="bod-socials"> <BsInstagram color="white" size={"40px"} className="spacing" />
+          <BsLinkedin color="white" size={"40px"} className="spacing" /></div>
+         
+
+       
+         
+        </div>
+        <div class="flip-card-back">
+         
+          <p className="quote-class">{props.data.test.description}</p>
+          
+          <BiPencil size="2rem" className="try" onClick={HandleUpdate} />
+          <BsFillTrashFill size="2rem" className="try" onClick={HandleDelete} />
+         
+          
         </div>
       </div>
-     
-
-      {/* {localStorage.getItem("token") ? (
-      ) : null} */}
     </div>
+   
+
+    {/* {localStorage.getItem("token") ? (
+    ) : null} */}
+  </div>
+   
+   
   );
 }

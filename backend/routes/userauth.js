@@ -32,7 +32,7 @@ router.post(
       const { email, password, name } = req.body;
 
       const salt = 10;
-
+      
       const encrypt = await bcrypt.hash(password, salt);
 
       const Users = db.collection("users");

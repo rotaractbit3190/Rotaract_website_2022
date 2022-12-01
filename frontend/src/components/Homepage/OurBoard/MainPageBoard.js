@@ -1,5 +1,11 @@
 import React from "react";
 import res from "./image.jpeg";
+import image2 from "./image-2.jpg";
+import image3 from "./image-3.jpg";
+import image4 from "./image-4.jpg";
+import image5 from "./image-5.jpg";
+import image6 from "./image-6.jpg";
+import imagex from "./imgx.jpg";
 import "./MainPageBoard.css";
 export default function MainPageBoard() {
   return (
@@ -9,51 +15,78 @@ export default function MainPageBoard() {
         {new Date().getFullYear() + 1}
       </div>
       <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-ride="carousel"
+        id="carouselExampleDark"
+        class="carousel  slide"
+        data-bs-ride="carousel"
       >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
             class="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active for-carousel justify-content-center">
-            <img
-              class="d-block w-50 "
-              src={res}
-              alt="First slide"
-              className="the-pic-x"
-            />
-          </div>
-          {/* <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide" />
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide" />
-          </div> */}
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
-        <a
+        <center>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src={imagex} class="d-block w-50" alt="..." height={600} />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src={image2} class="d-block w-50" alt="..." height={600} />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src={image3} class="d-block w-50" alt="..." height={600} />
+            </div>
+            <div class="carousel-item " data-bs-interval="2000">
+              <img src={res} class="d-block w-50" alt="..." height={600} />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src={image3} class="d-block w-50" alt="..." height={600} />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src={image4} class="d-block w-50" alt="..." height={600} />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src={image5} class="d-block w-50" alt="..." height={600} />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src={image6} class="d-block w-50" alt="..." height={600} />
+            </div>
+          </div>
+        </center>
+        <button
           class="carousel-control-prev"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </a>
-        <a
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
           class="carousel-control-next"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </a>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </>
   );

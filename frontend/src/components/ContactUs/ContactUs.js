@@ -1,9 +1,20 @@
 import React from "react";
 import "./ContactUs.css";
+import { Helmet } from "react-helmet-async";
+
 import { BiPhoneCall } from "react-icons/bi";
 export default function ContactUs() {
   return (
-    <div className="ContactMain">
+    <>
+        <Helmet>
+        <title>Rotaract Club Of BIT</title>
+        <meta
+          name="description"
+          content="Welcome to the Home page of  the Rotaract Club Of BIT.We strive to do our small part to the society, to make this world a better and happier place to live in."
+        />
+        <link rel="canonical" href="/ContactUs" />
+      </Helmet>
+      <div className="ContactMain">
       <div className="Our-Board the-start">Contact Us</div>
       <div className="for-the-contact">
         <div className="for-the-map">
@@ -42,5 +53,7 @@ export default function ContactUs() {
         </div>
       </div>
     </div>
+    </>
+  
   );
 }

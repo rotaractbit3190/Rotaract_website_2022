@@ -2,6 +2,7 @@ import "../Events/Events.css";
 import "./Board.css";
 import Modal from "../modal/Modal";
 import React, { useEffect, useState, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Boardmembers from "./Boardmembers";
@@ -22,6 +23,7 @@ export default function Board() {
   const refClose = useRef();
   const ref1 = useRef(null);
   const initial = [];
+  const [miniloader, setminiloader] = useState(false)
   const [content, setcontent] = useState(initial);
   useEffect(() => {
     GetAllData();
@@ -41,6 +43,7 @@ export default function Board() {
   };
 
   const CreateUpload = (e) => {
+    setminiloader(true)
     e.preventDefault();
     try {
       const storage = getStorage();
@@ -54,7 +57,7 @@ export default function Board() {
           console.log("2");
         });
 
-        // setloading(false);
+        setminiloader(false)
       });
     } catch (e) {
       console.log(e);
@@ -184,6 +187,14 @@ export default function Board() {
   };
   return (
     <>
+    <Helmet>
+        <title>Rotaract Club Of BIT</title>
+        <meta
+          name="description"
+          content="Welcome to the Home page of  the Rotaract Club Of BIT.We strive to do our small part to the society, to make this world a better and happier place to live in."
+        />
+        <link rel="canonical" href="/Board" />
+      </Helmet>
       <div className="card-start">
         <div className="Our-Board">Board Members</div>
 
@@ -201,7 +212,7 @@ export default function Board() {
           testtitle={title.title.length}
           title={title}
           descriptionbod={title.description}
-          loading={loading}
+          loading={miniloader}
           year={title.year}
           event={"Add an member"}
           name={"Name of the Member"}
@@ -220,7 +231,7 @@ export default function Board() {
           testtitle={title.title.length}
           title={title}
           descriptionbod={title.description}
-          loading={loading}
+          loading={miniloader}
         />
         <div className="flex-test">
           <InfiniteScroll

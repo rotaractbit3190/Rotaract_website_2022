@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Event from "./Event";
 import Modal from "../modal/Modal";
+import { Helmet } from "react-helmet-async";
 
 export default function Events(props) {
   const [title, settitle] = useState({ title: "", description: "" });
@@ -119,6 +120,14 @@ export default function Events(props) {
 
   return (
     <>
+        <Helmet>
+        <title>Rotaract Club Of BIT</title>
+        <meta
+          name="description"
+          content="Welcome to the Home page of  the Rotaract Club Of BIT.We strive to do our small part to the society, to make this world a better and happier place to live in."
+        />
+        <link rel="canonical" href="/Events" />
+      </Helmet>
     
      
       <div className="card-start">

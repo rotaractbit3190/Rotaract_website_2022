@@ -28,4 +28,8 @@
   .sub-sub-classname {
     font-size: 1.4rem;
   }
+  .youtube-iou{
+    height:250px;
+    width: 90vw;
+  }
 }
