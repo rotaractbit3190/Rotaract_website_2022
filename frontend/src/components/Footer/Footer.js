@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsInstagram, BsTwitter, BsLinkedin } from "react-icons/bs";
 import pic from '../navBar/logo.png'
 import { GoMail } from "react-icons/go";
 export default function Footer() {
@@ -12,10 +12,14 @@ export default function Footer() {
           <div className="containment">   <img src={pic} alt="" srcset="" className="containment-pic" /></div>
        
           <div className="footer-allin" >
-            <BsInstagram color="white" size={"40px"} className="spacing" />
-            <BsFacebook color="white" size={"40px"} className="spacing" />
-            <BsLinkedin color="white" size={"40px"} className="spacing" />
-            <GoMail color="white" size={"40px"} className="spacing" />
+            <a href="https://www.instagram.com/rotaractclubofbit/"  target="blank">  <BsInstagram color="white" size={"40px"} className="spacing" /></a>
+          
+            <a href="https://twitter.com/RotaractBIT"  target="blank"><BsTwitter color="white" size={"40px"} className="spacing" /></a>
+            
+            <a href="https://www.linkedin.com/company/rotaractclubofbit/mycompany/"  target="blank"><BsLinkedin color="white" size={"40px"} className="spacing" /></a>
+            
+            <a href="mailto:bitrotaract@gmail.com">  <GoMail color="white" size={"40px"} className="spacing" /></a>
+          
           </div>
         </div>
         <div className="copyrights">

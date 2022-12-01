@@ -33,7 +33,7 @@ export default function Board() {
 
   const handleChange = (e) => {
     settitle({ ...title, [e.target.name]: e.target.value });
-    console.log(title);
+    
   };
 
   const handleFile = (e) => {
@@ -47,24 +47,24 @@ export default function Board() {
     e.preventDefault();
     try {
       const storage = getStorage();
-      console.log("1");
+      
       const storageRef = ref(storage, `Board/${image.name}`);
       // setloading(true);
 
       uploadBytes(storageRef, image).then((snapshot) => {
         getDownloadURL(storageRef).then((url) => {
           setimage(url);
-          console.log("2");
+          
         });
 
         setminiloader(false)
       });
     } catch (e) {
-      console.log(e);
+      
     }
   };
 
-  const host = "http://localhost:5000";
+  const host = "https://rotaract-2022.vercel.app";
   const theyear = new Date().getFullYear();
   const [currentyear, setcurrentyear] = useState(theyear);
   const [hasmore, sethasmore] = useState(true);
@@ -88,20 +88,20 @@ export default function Board() {
         ReverseArray.push(json[i]);
       }
 
-      setcontent(content.concat(ReverseArray));
+      setcontent(content.concat(json));
       setcurrentyear(currentyear - 1);
-      console.log("concatinated");
-      if (currentyear === 2021 || currentyear === "2021") {
+      
+      if (currentyear === 2022 || currentyear === "2022") {
         sethasmore(false);
       }
-      // console.log(ReverseArray)
+      // 
     } catch (e) {
-      console.log("not foundd");
+      
     }
   };
   const updateNote = (random) => {
     ref1.current.click();
-    // console.log(random._id)
+    // 
     settitle({
       post: random.post,
       title: random.title,
@@ -111,7 +111,7 @@ export default function Board() {
       id: random.id,
     });
 
-    // console.log(note.id)
+    // 
   };
   const editNote = async (id) => {
     const response = await fetch(`${host}/rotaract/update/${id}`, {
@@ -130,7 +130,7 @@ export default function Board() {
       }), // body data type must match "Content-Type" header
     });
     const json = await response.json();
-    console.log(json); // parses JSON response into native JavaScript objects
+    
 
     let newcard = JSON.parse(JSON.stringify(content));
     for (let index = 0; index < newcard.length; index++) {
@@ -150,11 +150,11 @@ export default function Board() {
       },
     });
     await response.json();
-    console.log(`${host}/rotaract/delete/${id}/${year}`);
+    
     const sort = content.filter((e) => {
       return e.id !== id;
     });
-    console.log(sort);
+    
     setcontent(sort);
   };
   const handleClick = async (e) => {
@@ -174,7 +174,7 @@ export default function Board() {
         linkedin: title.linkedin,
       }),
     });
-    console.log(title.year);
+    
 
     const json = await response.json();
 
@@ -182,7 +182,7 @@ export default function Board() {
 
     settitle({ title: "", description: "" });
 
-    console.log(title);
+    
     refClose.current.click();
   };
   return (
@@ -197,8 +197,7 @@ export default function Board() {
       </Helmet>
       <div className="card-start">
         <div className="Our-Board">Board Members</div>
-
-        <Modal
+        {localStorage.getItem('token')? <Modal
           handleChange={handleChange}
           handleFile={handleFile}
           CreateUpload={CreateUpload}
@@ -217,7 +216,8 @@ export default function Board() {
           event={"Add an member"}
           name={"Name of the Member"}
           description={"Enter the description"}
-        />
+        />:null}
+       
         <UpdateCard
           handleChange={handleChange}
           handleFile={handleFile}
@@ -239,7 +239,7 @@ export default function Board() {
             dataLength={content.length}
             next={() => {
               GetAllData();
-              console.log("here now");
+              
             }}
             hasMore={hasmore}
             loader={

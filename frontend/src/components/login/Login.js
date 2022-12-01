@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Login.css'
 
-const host = "http://localhost:5000";
+const host = "https://rotaract-2022.vercel.app";
 const Login = () => {
   const nav = useNavigate();
 

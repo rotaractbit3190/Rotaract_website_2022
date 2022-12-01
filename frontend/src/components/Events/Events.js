@@ -33,24 +33,24 @@ export default function Events(props) {
     e.preventDefault();
     try {
       const storage = getStorage();
-      console.log("1")
+  
       const storageRef = ref(storage, `Events/${image.name}`);
       // setloading(true);
 
       uploadBytes(storageRef, image).then((snapshot) => {
         getDownloadURL(storageRef).then((url) => {
           setimage(url);
-          console.log("2")
+         
         });
 
         setminiloader(false)
       });
     } catch (e) {
-      console.log(e);
+     
     }
   };
 
-  const host = "http://localhost:5000";
+  const host = "https://rotaract-2022.vercel.app";
 
   const GetAllData = async (e) => {
     props.loader(true)
@@ -70,7 +70,7 @@ export default function Events(props) {
     }
 
     setcontent(json);
-    console.log(ReverseArray);
+    // 
     props.loader(false)
   };
   const HandleDelete = async (id) => {
@@ -84,7 +84,7 @@ export default function Events(props) {
     const sort = content.filter((e) => {
       return e.id !== id;
     });
-    console.log(sort);
+    
     setcontent(sort);
   };
   const handleClick = async (e) => {
@@ -108,7 +108,7 @@ export default function Events(props) {
     settitle({ title: "", description: "" });
     
  
-    console.log(title);
+    
     refClose.current.click();
     
    
@@ -129,10 +129,10 @@ export default function Events(props) {
         <link rel="canonical" href="/Events" />
       </Helmet>
     
-     
+      
       <div className="card-start">
-        
-      <Modal
+      <div className="Our-Board">Our events</div>
+      {localStorage.getItem('token')? <Modal
         handleChange={handleChange}
         handleFile={handleFile}
         CreateUpload={CreateUpload}
@@ -149,7 +149,8 @@ export default function Events(props) {
         name={"Event Name"}
         description={"Event Description"}
         
-      />
+      />:null}
+     
       
         <div className="flex-box">
           {content.map((e) => {

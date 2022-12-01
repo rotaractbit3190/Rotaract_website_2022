@@ -25,7 +25,7 @@ router.get(
       // res.json(alldata)
 
     }catch(err){
-      console.log(err.message)
+      
 
     }
     

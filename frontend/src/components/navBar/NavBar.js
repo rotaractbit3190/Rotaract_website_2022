@@ -1,15 +1,21 @@
 import "./nav.css";
 
-import { Link } from "react-router-dom";
+import { Link,useNavigate  } from "react-router-dom";
 import logo from "./logo.png";
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import thelogo from "./logorotaract.png";
 import Divider from "../Homepage/divider/Divider";
-import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsInstagram, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 export default function NavBar(props) {
   const [sidebar, setsidebar] = useState(false);
+  let navigate=useNavigate()
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
 
   const handleClick = () => {
     setsidebar(true);
@@ -46,6 +52,9 @@ export default function NavBar(props) {
             <li>
               <Link to="/ContactUs">Contact</Link>
             </li>
+            {localStorage.getItem('token')?<li>
+                  <button onClick={handleLogout}>Logout</button>
+                </li>:null}
             <li>
               <a href="https://forms.gle/MzbJ6ZP2XySagU1E8">Join Us</a>
             </li>
@@ -87,10 +96,14 @@ export default function NavBar(props) {
                 </a>
               </li>
               <div className="sociala">
-                <BsInstagram color="white" size={"30px"} className="spacing" />
-                <BsFacebook color="white" size={"30px"} className="spacing" />
-                <BsLinkedin color="white" size={"30px"} className="spacing" />
-                <GoMail color="white" size={"36px"} className="spacing" />
+                <a href="https://www.instagram.com/rotaractclubofbit/" target="blank"> <BsInstagram color="white" size={"30px"} className="spacing" /></a>
+                <a href="https://twitter.com/RotaractBIT"><BsTwitter color="white" size={"30px"} className="spacing" /></a>
+                <a href="https://www.linkedin.com/company/rotaractclubofbit/mycompany/">
+                  
+                <BsLinkedin color="white" size={"30px"} className="spacing" /></a>
+               
+                <a href="mailto:bitrotaract@gmail.com"> <GoMail color="white" size={"36px"} className="spacing" /></a>
+               
               </div>
             </div>
           </div>

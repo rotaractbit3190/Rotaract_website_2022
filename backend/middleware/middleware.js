@@ -8,7 +8,7 @@ const fetchuser=(req,res,next)=>{
     }
     try {
         const data =jwt.verify(token,JWT_SECRET)
-        //Here below the jwt will verify the token and using the data find that user  and that user will be sent as the requested user to the /getuser page
+        //Here below the jwt will verify the token and using the data find the user that user will be sent as the requested user to the /getuser page
         req.user=data.user
         next()
     

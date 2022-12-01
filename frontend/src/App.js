@@ -19,7 +19,7 @@ export default function App() {
   const [loader, setloader] = useState(false)
   const checkcursors=(e)=>{
     setcheckcursor(e)
-    console.log(e)
+    
 
   }
   const setLoading=(isloading)=>{

@@ -17,7 +17,8 @@ const Event = (props) => {
         </div></center>
        
         <div className="card-description The-text">{description}</div>
-        <BiPencil size="2rem" className="try" onClick={handleClick} />
+        {localStorage.getItem('token')?
+        <BiPencil size="2rem" className="try" onClick={handleClick} />:null}
     </div>
   );
 };
