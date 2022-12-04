@@ -92,7 +92,7 @@ export default function NavBar(props) {
               </li>
               <li>
                 <a href="https://forms.gle/MzbJ6ZP2XySagU1E8" className="header-li" onClick={gotop}>
-                  Contact Us
+                  Join Us
                 </a>
               </li>
               <div className="sociala">

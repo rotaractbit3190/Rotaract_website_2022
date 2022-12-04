@@ -53,3 +53,32 @@ a{
    
     margin: 100px 100px 0px 100px;
 }
+
+@media screen and (max-width:961px) {
+    .for-the-contact{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+       
+    }
+    .for-the-map{
+        display: flex;
+        flex-direction: column;
+        /* height: 100px;
+        width: 30vw; */
+       
+       
+    }
+    .for-theese{
+        height: 300px;
+        width: 80vw;
+        margin-left: 10vw;
+    }
+    .the-real-names{
+
+   
+       margin: 0;
+       margin-top: 100px;
+    }
+}

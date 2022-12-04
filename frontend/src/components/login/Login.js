@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Login.css'
-
+import { Helmet } from "react-helmet-async";
 const host = "https://rotaract-2022.vercel.app";
 const Login = () => {
   const nav = useNavigate();
@@ -40,6 +40,15 @@ const Login = () => {
     } catch (e) {}
   };
   return (
+    <>
+    <Helmet>
+    <title>Rotaract Club Of BIT</title>
+    <meta
+      name="description"
+      content="Welcome to the Home page of  the Rotaract Club Of BIT.We strive to do our small part to the society, to make this world a better and happier place to live in."
+    />
+    <link rel="canonical" href="/login" />
+  </Helmet>
     <form onSubmit={handleSubmit} className="form-submit-one">
       <div className="top-margin-one">
         <div class="mb-3 ">
@@ -81,6 +90,7 @@ const Login = () => {
         </button>
       </div>
     </form>
+    </>
   );
 };
 

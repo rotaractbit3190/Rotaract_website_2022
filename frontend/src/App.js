@@ -25,7 +25,10 @@ export default function App() {
   const setLoading=(isloading)=>{
     setloader(isloading)
   }
-  
+ 
+  const Events = React.lazy(() => {
+    return import("./components/Events/Events");
+  });
   return (
     <>
       <Router>
@@ -36,7 +39,7 @@ export default function App() {
             <Route path="/" element={<HomePage nocursor={checkcursor} />} />
             <Route path="/login" element={<Login />} />
             <Route path="/Board" element={<Board/>} />
-            <Route path="/AboutUs" element={<AboutUs />} />
+         
             <Route path="/Events" element={<Events loader={setLoading} />} />
             <Route path="/ContactUs" element={<ContactUs/>} />
           </Routes>
