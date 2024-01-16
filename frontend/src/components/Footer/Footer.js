@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="copyrights">
-          Rotaract Club of BIT,All Rights Reserved @{new Date().getFullYear()}
+          Rotaract Club of B.I.T, All Rights Reserved @{new Date().getFullYear()}
         </div>
       </div>
     </>

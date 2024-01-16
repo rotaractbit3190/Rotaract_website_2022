@@ -1,91 +1,90 @@
+/* Import fonts */
+
 /* *{
   overflow: hidden;
 } */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
 .head {
-text-align: center;
+  text-align: center;
 }
+
 .headText {
   padding-top: 200px;
-  font-size: 65px;
+  font-size: 60px;
   color: white;
-  text-align: centre;
+  text-align: center;
   font-family: 'Abhaya Libre', serif;
-  font-weight:bold;
-  text-shadow:6px 2px #183F46;
-
+  font-weight: bold;
+  text-shadow: 6px 2px #183F46;
+  line-height: 1; /* Added line-height */
+  letter-spacing: 3px;
 }
 
-
-.for-deer{
+.for-deer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.for-deer::before{
+
+.for-deer::before {
   content: '';
   background-image: url('./deer.png');
   background-repeat: no-repeat;
-  background-size: 43rem;
-  position: absolute;
-  left: 23%;
-  top: 20rem;
+  background-size: 30rem;
+  position:absolute;
+  left: 34%;
+  top: 29rem;
   width: 66%;
   height: 100%;
   z-index: -1000;
   overflow: hidden;
   opacity: 0.3;
-
 }
 
-.typingtext{
+.typingtext {
   color: antiquewhite;
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  text-shadow:5px 3px #6835b6
-
-
+  text-shadow: 5px 3px #6835b6;
+  line-height: 1.2; /* Added line-height */
 }
 
-@media screen and (max-width:961px) {
+@media screen and (max-width: 961px) {
   .headText {
     padding-top: 200px;
     font-size: 40px;
     color: white;
-    text-align: centre;
+    text-align: center; /* Corrected typo */
     font-family: 'Poppins', sans-serif;
-    font-weight:bold;
-    text-shadow:6px 2px #183F46;
-  
+    font-weight: bold;
+    text-shadow: 6px 2px #183F46;
+    line-height: 1.2; /* Added line-height */
   }
-  
-.typingtext{
-  color: antiquewhite;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  text-shadow:4px 3px #6835b6
 
+  .typingtext {
+    color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-shadow: 4px 3px #6835b6;
+    line-height: 1.2; /* Added line-height */
+  }
 
-}
-.for-deer::before{
-  content: '';
-  background-image: url('./deer.png');
-  background-repeat: no-repeat;
-  background-size: 20rem;
-  position: absolute;
-  left: 10%;
-  top: 30rem;
-  width: 88%;
-  height: 100%;
-  z-index: -1000;
-  overflow: hidden;
-  opacity: 0.3;
-
-}
-
-  
+  .for-deer::before {
+    content: '';
+    background-image: url('./deer.png');
+    background-repeat: no-repeat;
+    background-size: 20rem;
+    position: absolute;
+    left: 10%;
+    top: 30rem;
+    width: 88%;
+    height: 100%;
+    z-index: -1000;
+    overflow: hidden;
+    opacity: 0.3;
+  }
 }

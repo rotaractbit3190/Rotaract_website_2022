@@ -6,7 +6,7 @@ import ReactTypingEffect from "react-typing-effect";
 function heading(props) {
   return (
     <div className="head">
-      <div className="headText">ROTARACT CLUB OF B.I.T</div>
+      <div className="headText">ROTARACT  CLUB  OF <div></div> Bangalore  Institute  of  Technology</div>
       <div className="typingtextdiv">
         {props.check ?( <ReactTypingEffect
             eraseSpeed={100}
@@ -15,7 +15,7 @@ function heading(props) {
             eraseDelay={2000}
             speed={100}
             className="typingtext"
-            text={["SPRINT STRONG STAG"]}
+            text={["UNVEILING HORIZONS"]}
           />):null}
       </div>
 

@@ -20,7 +20,7 @@ export default function ParentClubs() {
             <img src={main} alt="" srcset="" className="the-pic" />
           </div>
         </a>
-        <a href="https://www.instagram.com/rotaractbangaloreaagneya/" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/rotaryaagneya?igsh=aTYxOWY3aDllMjFw" target="_blank" rel="noreferrer">
           <div className="child-parent-1">
             <img src={second} alt="" className="the-pic" />
           </div>
