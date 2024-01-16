@@ -18,9 +18,13 @@
 .for-the-map{
     display: flex;
     flex-direction: row;
-   
-   
 }
+.for-theese {
+    height: 450px;
+    width: 35vw;
+    margin-left: 10vw;
+    border-radius: 15px; /* Adjust the value as needed */
+}    
 .subname{
     display: flex;
     flex-direction: row;
@@ -67,14 +71,13 @@ a{
         flex-direction: column;
         /* height: 100px;
         width: 30vw; */
-       
-       
     }
-    .for-theese{
+    .for-theese {
         height: 300px;
         width: 80vw;
         margin-left: 10vw;
-    }
+        border-radius: 15px; /* Adjust the value as needed */
+    }    
     .the-real-names{
 
    

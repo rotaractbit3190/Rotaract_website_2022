@@ -7,10 +7,10 @@ export default function ContactUs() {
   return (
     <>
         <Helmet>
-        <title>Rotaract Club Of BIT</title>
+        <title>Rotaract Club Of B.I.T</title>
         <meta
           name="description"
-          content="Welcome to the Home page of  the Rotaract Club Of BIT.We strive to do our small part to the society, to make this world a better and happier place to live in."
+          content="Welcome to the Home page of the Rotaract Club Of B.I.T. We strive to do our small part to the society, to make this world a better and happier place to live in."
         />
         <link rel="canonical" href="/ContactUs" />
       </Helmet>
@@ -31,22 +31,22 @@ export default function ContactUs() {
             <div className="subname">
               <BiPhoneCall color="white" size={"40px"} className="spacing " />
               <div className="the-actual">
-                <div className="The-text check-check">Rtr.Anushka Thakur</div>
-                <div className="The-text check-check"><a href="tel:+91-7479430908">+91-7479430908</a></div>
+                <div className="The-text check-check">Rtr. DS Prajwal Gowda</div>
+                <div className="The-text check-check"><a href="tel:+91-9448145109">+91-9448145109</a></div>
               </div>
             </div>
             <div className="subname for-the-p">
               <BiPhoneCall color="white" size={"40px"} className="spacing " />
               <div className="the-actual">
-                <div className="The-text check-check">Rtr.Sunaina Gattu</div>
-                <div className="The-text check-check"><a href="tel:+91-6366082930">+91-6366082930</a></div>
+                <div className="The-text check-check">Rtr. Hritika M Kalaria</div>
+                <div className="The-text check-check"><a href="tel:+91-7019893552">+91-7019893552</a></div>
               </div>
             </div>
             <div className="subname for-the-p">
               <BiPhoneCall color="white" size={"40px"} className="spacing " />
               <div className="the-actual">
-                <div className="The-text check-check">Rtr.Manognya Lokesh</div>
-                <div className="The-text check-check"><a href="tel:+91-6362542920">+91-6362542920</a></div>
+                <div className="The-text check-check">Rtr. Prateek Kota</div>
+                <div className="The-text check-check"><a href="tel:+91-9019532059">+91-9019532059</a></div>
               </div>
             </div>
           </div>
