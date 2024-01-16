@@ -245,7 +245,7 @@ export default function Board() {
             loader={
               <div>
                 <img
-                  src="https://media4.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif?cid=790b7611a667d7fcd301051b1f218cbc69d76e5eaad2334a&rid=giphy.gif&ct=g"
+                  src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fedms.punjab.gov.in%2FAccount%2Flogin&psig=AOvVaw27huVbCYpxIL4HPQLLUL4c&ust=1705503147435000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCICAlryU4oMDFQAAAAAdAAAAABAQ"
                   alt=""
                   srcSet=""
                 />

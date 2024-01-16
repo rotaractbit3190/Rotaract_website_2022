@@ -9,8 +9,8 @@
     padding-left: 3rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 700; /* Use a bold font weight */
-    color: #2C3E50; /* Change the text color */
-    text-shadow: 2px 1px #34495E; /* Adjusted text shadow */
+    color: #ffffff; /* Change the text color */
+    text-shadow: 2px 1px #2a4560; /* Adjusted text shadow */
     font-size: 3vw;
     transition: all 0.3s ease-in-out;
 }
@@ -45,7 +45,7 @@
     font-size: 18px;
     font-family: 'Roboto', sans-serif; /* Use a more standard font */
     font-weight: 400; /* Regular font weight */
-    color: #666; /* Darker color for better contrast */
+    color: #ffffff; /* Darker color for better contrast */
     line-height: 1.5; /* Improved line spacing */
     widows: 2;
 }

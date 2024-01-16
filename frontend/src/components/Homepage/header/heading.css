@@ -35,10 +35,11 @@
   background-image: url('./deer.png');
   background-repeat: no-repeat;
   background-size: 28rem;
-  position:absolute;
-  left: 35.5%;
+  position: absolute;
+  left: 50.5%; /* Center align by setting left to 50% */
+  transform: translateX(-50%); /* Adjust to center the image precisely */
   top: 29rem;
-  width: 66%;
+  width: 28rem; /* Adjust the width if needed */
   height: 100%;
   z-index: -1000;
   overflow: hidden;
