@@ -18,7 +18,7 @@ export default function Footer() {
             
             <a href="https://www.linkedin.com/company/rotaractclubofbit/mycompany/"  target="blank"><BsLinkedin color="white" size={"40px"} className="spacing" /></a>
             
-            <a href="mailto:bitrotaract@gmail.com">  <GoMail color="white" size={"40px"} className="spacing" /></a>
+            <a href="mailto:rotaract@bit-bangalore.edu.in">  <GoMail color="white" size={"40px"} className="spacing" /></a>
           
           </div>
         </div>
