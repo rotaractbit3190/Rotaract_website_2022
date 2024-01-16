@@ -138,6 +138,7 @@ body {
   margin-bottom: 50px;
   padding-top: 50px;
   color: #c9e4ff;
+  text-shadow: 0 0 10px rgba(201, 228, 255, 0.8); /* Adjust the values as needed */
 }
 
 .bod-socials {
