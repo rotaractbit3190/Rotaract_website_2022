@@ -1,72 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
-
-
-.Events{
-    padding-top: 100px;
-
+.Events {
+    padding-top: 80px;
 }
 
-.Event-title{
-    padding-left: 5rem;
+.Event-title {
+    padding-left: 3rem;
     font-family: 'Poppins', sans-serif;
-    font-weight:bold;
-    color: white;
-    text-shadow:6px 2px #183F46;
-    font-size: 3.2vw;
-
-
+    font-weight: 700; /* Use a bold font weight */
+    color: #2C3E50; /* Change the text color */
+    text-shadow: 2px 1px #34495E; /* Adjusted text shadow */
+    font-size: 3vw;
+    transition: all 0.3s ease-in-out;
 }
 
-.image-card{
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
+.image-card {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.event-image{
-    padding-top: 30px;
-    width: 50vw;
-    height: 30rem;
+.event-image {
+    padding-top: 25px;
+    width: 45vw;
+    height: 24rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
-.card-start{
-    padding-top: 200px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.card-description{
-    padding-top: 50px;
-    padding-left: 7vw;
-    padding-right: 7vw;
-  
-    font-size:20px;
-    font-family: "Open Sans", sans-serif;
-    color: white;
 
+.card-start {
+    padding-top: 150px;
 }
-.form-control{
+
+.card-description {
+    padding-top: 30px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: justify;
+    text-indent: 2em;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif; /* Use a more standard font */
+    font-weight: 400; /* Regular font weight */
+    color: #666; /* Darker color for better contrast */
+    line-height: 1.5; /* Improved line spacing */
+    widows: 2;
+}
+
+.form-control {
     text-transform: none;
 }
-.try{
-    color: antiquewhite;
-}
-.maintainsize{
-    height: 2 rem;
-    width: 2 rem;
+
+.try {
+    color: #E74C3C; /* Change the color to a contrasting one */
+    transition: color 0.3s ease-in-out;
 }
 
-@media  screen and (max-width:961px) {
-    .event-image{
-        padding-top: 30px;
+.maintainsize {
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+@media screen and (max-width: 961px) {
+    .event-image {
+        padding-top: 25px;
         width: 76vw;
-        height: 16rem;
+        height: 14rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
 }

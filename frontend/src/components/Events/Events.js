@@ -124,14 +124,14 @@ export default function Events(props) {
         <title>Rotaract Club Of BIT</title>
         <meta
           name="description"
-          content="Welcome to the Home page of  the Rotaract Club Of BIT.We strive to do our small part to the society, to make this world a better and happier place to live in."
+          content="Welcome to the Home page of the Rotaract Club Of BIT. We strive to do our small part to the society, to make this world a better and happier place to live in."
         />
         <link rel="canonical" href="/Events" />
       </Helmet>
     
       
       <div className="card-start">
-      <div className="Our-Board">Our events</div>
+      <div className="Our-Board">Our Events</div>
       {localStorage.getItem('token')? <Modal
         handleChange={handleChange}
         handleFile={handleFile}
