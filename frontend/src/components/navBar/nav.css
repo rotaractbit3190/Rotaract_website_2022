@@ -22,7 +22,7 @@ ul {
     top: 0;
     background-color: transparent;
     background-color:#0B0C15;
-    height: 100px;
+    height: 70px;
     display: flex;
     flex-direction: row;
    align-items: center;
@@ -46,7 +46,6 @@ ul {
   .logoSize{
     width: 100px;
     height: 100px;
-    
     padding-left:50px;
   }
   
@@ -86,10 +85,18 @@ ul {
     justify-content: center;
     align-items: center;
   }
-  .innerheader{
-    display: flex;
-    flex-direction: row;
-  }
+  .innerheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Center elements horizontally */
+  align-items: center; /* Center elements vertically */
+}
+
+.logo-image {
+  display: flex;
+  align-items: center;
+}
+
 
   @media screen and (max-width: 961px) {
     .burger-name{
