@@ -1,11 +1,18 @@
-.image-loader{
+.image-loader {
     height: 100%;
     width: 100%;
-}
-.main-loader{
+  }
+  
+  .main-loader {
     height: 20rem;
     width: 30rem;
-}
-.start-loader{
+    margin: auto; /* Center the loader horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .start-loader {
     margin-top: 20rem;
-}
+  }
+  

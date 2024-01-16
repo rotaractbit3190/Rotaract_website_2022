@@ -10,16 +10,16 @@ export default function Theme() {
 }, []);
   return (
     <>
-      <div className="main-one ">Theme for the year 2022-2023</div>
-      <div className="sub-text" data-aos="slide-up">SPRINT STRONG STAG</div>
+      <div className="main-one ">Theme for the year 2023-2024</div>
+      <div className="sub-text" data-aos="slide-up">Unveiling Horizons</div>
       <div className="youtube">
         <center><iframe className="youtube-iou" width="700" height="500" src="https://www.youtube-nocookie.com/embed/CLa9kTz24hA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
       
       </div>
       <div className="main-align">
         <div className="The-text for-main-eve" data-aos="fade-right">
-          We, the team of Rotaract Club of Bangalore B.I.T. have decided the
-          theme of the Rotayear 2022-23 to be “Sprint Strong Stags”. We believe
+          We, the team of Rotaract Club of Bangalore Institute of Technology. have decided the
+          theme of the Rotayear 2023-24 to be “Unveiling Horizons”. We believe
           in standing out as exceptional. The brilliant team we have this year
           has unique talents. Shining like a bright unicorn with the horn as our
           guiding spirit, we would be developing leadership and bravery. With
@@ -30,13 +30,13 @@ export default function Theme() {
           club is ready for this upcoming joyride of Rotaract.We Aim to be
           Exceptional
         </div>
-        <div className=" The-text sub-sub-classname">1.Community Service</div>
+        <div className=" The-text sub-sub-classname">1. Community Service</div>
         <div className="The-text" data-aos="fade-up">
           We believe in serving the community. The team of RCBIT works in full
           force for the betterment of the society and does the needful to the
           unprivileged.,
         </div>
-        <div className=" The-text sub-sub-classname">2.Club Service</div>
+        <div className=" The-text sub-sub-classname">2. Club Service</div>
         <div className="The-text" data-aos="fade-right">
           With activities on all levels, we focus on club service as With
           activities on all levels, we focus on club service as well. A healthy
@@ -44,7 +44,7 @@ export default function Theme() {
           fellowships are important to us.
         </div>
         <div className=" The-text sub-sub-classname" data-aos="fade-up">
-          3.International Service
+          3. International Service
         </div>
         <div className="The-text" data-aos="fade-right">
           Spreading wings and flying with glory is what RCBIT aims for. We
@@ -53,7 +53,7 @@ export default function Theme() {
           take care of in every Rota-Year.
         </div>
         <div className=" The-text sub-sub-classname" data-aos="fade-up">
-          3.Professional development
+          4. Professional Development
         </div>
         <div className="The-text" data-aos="fade-right">
           Growing with Rotaract is an extraordinary process. Inculcating

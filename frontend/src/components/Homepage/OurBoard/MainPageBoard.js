@@ -11,8 +11,8 @@ export default function MainPageBoard() {
   return (
     <>
       <div className="main-one changes-cor">
-        Our team for the year {new Date().getFullYear()}-
-        {new Date().getFullYear() + 1}
+        Our team for the year {new Date().getFullYear() - 1}-
+        {new Date().getFullYear()}
       </div>
       <div
         id="carouselExampleDark"

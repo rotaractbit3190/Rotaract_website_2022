@@ -12,10 +12,10 @@ export default function HomePage(props) {
   return (
     <>
       <Helmet>
-        <title>Rotaract Club Of BIT</title>
+        <title>Rotaract Club Of B.I.T</title>
         <meta
           name="description"
-          content="Welcome to the Home page of  the Rotaract Club Of BIT.We strive to do our small part to the society, to make this world a better and happier place to live in."
+          content="Welcome to the Home page of the Rotaract Club Of B.I.T. We strive to do our small part to the society, to make this world a better and happier place to live in."
         />
         <link rel="canonical" href="/" />
       </Helmet>
