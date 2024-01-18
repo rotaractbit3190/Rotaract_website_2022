@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
 
 body {
   background-color: #000;
   margin: 0;
-  font-family: 'Avenir', sans-serif;
   color: var(--bs-body-color);
   background-image: url('/workspaces/Rotaract_website_2022/frontend/src/components/Board/18 (4).png');
   background-size: contain; /* Adjust to 'contain' or other values as needed */
   background-position: center; /* Adjust to customize the position */
   background-repeat: repeat; /* Ensure the image doesn't repeat */  
+  font-family: 'Dekko', sans-serif;
 }
 
 .image-for-bod {
@@ -30,6 +30,7 @@ body {
   border-radius: 50%;
   border: 5px solid var(--bs-blue);
   overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.5); 
 }
 
 .flip-card {
@@ -41,11 +42,12 @@ body {
 }
 
 .Bod-name {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Dekko', sans-serif;
   font-weight: bold; /* Added to make the font bold */
   font-size: 1.5rem;
   margin: 10px 0;
   color: var(--bs-blue); /* Changed the color to blue */
+  text-shadow: 0 0 20px rgba(0, 0, 255, 0.5); 
 }
 
 .card-outer {
@@ -123,7 +125,7 @@ body {
 }
 
 .quote-class {
-  font-family: 'Avenir';
+  font-family: 'Dekko';
   font-style: italic;
   font-weight: bold;
   font-size: 15px;
@@ -132,13 +134,13 @@ body {
 }
 
 .Our-Board {
-  font-family: 'Abhaya Libre', serif;
+  font-family: 'Dekko', sans-serif;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 50px;
   padding-top: 50px;
   color: #c9e4ff;
-  text-shadow: 0 0 10px rgba(201, 228, 255, 0.8); /* Adjust the values as needed */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Adjust the values as needed */
 }
 
 .bod-socials {
