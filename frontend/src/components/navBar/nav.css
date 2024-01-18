@@ -1,32 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dekko&display=swap");
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    padding-left: 40rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding-left: 40rem;
+}
 
-  }
-  .header{
-    position: fixed;
-    overflow: hidden;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    background-color: transparent;
-    background-color:#0B0C15;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-   align-items: center;
-   
-    border-bottom: 0.5px solid #9aa0a6;
-    box-shadow: 2px 7px 15px #9347FF;
-    
-  }
+.header {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  background-color: transparent;
+  background-color: #0B0C15;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 0.5px solid #9aa0a6;
+  box-shadow: 2px 7px 15px #9347FF;
+  font-family: 'Dekko', sans-serif; /* Use Dekko font */
+}
 
 .burger-name{
   display: none;
@@ -34,7 +34,7 @@ ul {
   .right {
     float: right;
     font-size:20px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Dekko", sans-serif;
     font-size: large;
     font-weight: bold;
     
@@ -51,19 +51,22 @@ ul {
     display: block;
     color: white;
     text-align: center;
-    
-
     text-decoration: none;
-  }
-  li{
-    padding-left: 30px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 1.34vw;
-  }
-  li a:hover {
+    font-family: 'Dekko', sans-serif; /* Use Dekko font */
+}
+li {
+  padding-left: 55px;
+  font-family: 'Dekko', sans-serif; /* Use Dekko font */
+  font-weight: bold;
+  font-size: 1.24vw;
+}
+li a:hover {
     background-color: #111;
-  }
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    color: white; /* Set text color to white */
+    transition: text-shadow 0.3s ease-in-out;
+}
+
 
   .border{
     padding:10px;
@@ -144,7 +147,7 @@ ul {
       display: flex;
       flex-direction: column;
       color: #8d9297;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Dekko", sans-serif;
       font-size: 100px;
       font-weight: bold;
       align-items: center;

@@ -56,7 +56,7 @@ export default function NavBar(props) {
                   <button onClick={handleLogout}>Logout</button>
                 </li>:null}
             <li>
-              <a href="https://forms.gle/MzbJ6ZP2XySagU1E8">Join Us</a>
+              <a href="https://forms.gle/rwjZh4pCsaQXLD8r9">Join Us</a>
             </li>
           </ul>
         </div>

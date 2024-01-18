@@ -12,22 +12,25 @@ export default function Theme() {
     const player = new window.YT.Player("youtubePlayer", {
       videoId: "tSFRkj94Tcw",
       events: {
-        onReady: (event) => {
-          event.target.playVideo();
-        },
         onStateChange: (event) => {
           if (event.data === window.YT.PlayerState.ENDED) {
             event.target.seekTo(0);
-            event.target.playVideo();
           }
         },
       },
     });
 
+    // Pause the video on component unmount
     return () => {
-      // Clean up resources if needed
+      player.stopVideo();
     };
   }, []);
+
+  // Function to start the video when the play button is clicked
+  const startVideo = () => {
+    const player = new window.YT.Player("youtubePlayer");
+    player.playVideo();
+  };
 
   return (
     <>
@@ -41,9 +44,10 @@ export default function Theme() {
             style={{
               width: "700px",
               height: "500px",
-              borderRadius: '30px',
+              borderRadius: '35px',
               overflow: 'hidden',
             }}
+            onClick={startVideo}
           ></div>
         </center>
       </div>
