@@ -1,20 +1,51 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./theme.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 export default function Theme() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
+  }, []);
 
+  useEffect(() => {
+    const player = new window.YT.Player("youtubePlayer", {
+      videoId: "tSFRkj94Tcw",
+      events: {
+        onReady: (event) => {
+          event.target.playVideo();
+        },
+        onStateChange: (event) => {
+          if (event.data === window.YT.PlayerState.ENDED) {
+            event.target.seekTo(0);
+            event.target.playVideo();
+          }
+        },
+      },
+    });
 
-}, []);
+    return () => {
+      // Clean up resources if needed
+    };
+  }, []);
+
   return (
     <>
-      <div className="main-one ">Theme for the year 2023-2024</div>
+      <div className="main-one">Theme for the year 2023-2024</div>
       <div className="sub-text" data-aos="slide-up">Unveiling Horizons</div>
       <div className="youtube">
-        <center><iframe className="youtube-iou" width="700" height="500" src="https://www.youtube-nocookie.com/embed/CLa9kTz24hA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-      
+        <center>
+          <div
+            id="youtubePlayer"
+            className="youtube-iou"
+            style={{
+              width: "700px",
+              height: "500px",
+              borderRadius: '30px',
+              overflow: 'hidden',
+            }}
+          ></div>
+        </center>
       </div>
       <div className="main-align">
         <div className="The-text for-main-eve" data-aos="fade-right">
@@ -30,20 +61,20 @@ export default function Theme() {
           club is ready for this upcoming joyride of Rotaract.We Aim to be
           Exceptional
         </div>
-        <div className=" The-text sub-sub-classname">1. Community Service</div>
+        <div className=" The-Headtext sub-sub-classname">1. Community Service</div>
         <div className="The-text" data-aos="fade-up">
           We believe in serving the community. The team of RCBIT works in full
           force for the betterment of the society and does the needful to the
           unprivileged.,
         </div>
-        <div className=" The-text sub-sub-classname">2. Club Service</div>
+        <div className=" The-Headtext sub-sub-classname">2. Club Service</div>
         <div className="The-text" data-aos="fade-right">
           With activities on all levels, we focus on club service as With
           activities on all levels, we focus on club service as well. A healthy
           and friendly environment is maintained within the club. Bonding and
           fellowships are important to us.
         </div>
-        <div className=" The-text sub-sub-classname" data-aos="fade-up">
+        <div className=" The-Headtext sub-sub-classname" data-aos="fade-up">
           3. International Service
         </div>
         <div className="The-text" data-aos="fade-right">
@@ -52,7 +83,7 @@ export default function Theme() {
           globally. Friendship and collaboration worldwide is what we specially
           take care of in every Rota-Year.
         </div>
-        <div className=" The-text sub-sub-classname" data-aos="fade-up">
+        <div className=" The-Headtext sub-sub-classname" data-aos="fade-up">
           4. Professional Development
         </div>
         <div className="The-text" data-aos="fade-right">

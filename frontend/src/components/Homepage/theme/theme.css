@@ -1,13 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Dekko&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 .sub-text {
-  font-family: "Poppins", sans-serif;
+  font-family: "Dekko", sans-serif;
   margin-left: 4.7rem;
   color: white;
   text-shadow: 5px 3px #6835b6;
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
+
+
+.The-text,
+sub-sub-classname {
+  font-family: "Dekko", sans-serif;
+}
+
 .for-main-eve{
   padding-bottom: 50px;
 }
@@ -16,6 +24,18 @@
   text-align: justify;
 }
 
+.The-Headtext {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px #6835b6, 0 0 20px #6835b6, 0 0 30px #6835b6;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding-left: 60px;
+}
+
+
 .sub-sub-classname {
   font-size: 1.7rem;
   margin-top: 30px;
@@ -23,12 +43,13 @@
 
 @media screen and (max-width: 900px) {
   .sub-text {
-    font-family: "Poppins", sans-serif;
+    font-family: "Dekko", sans-serif; /* Change to Dekko */
     margin-left: 3.1rem;
     color: white;
     text-shadow: 5px 3px #6835b6;
     font-size: 1rem;
   }
+
   .sub-sub-classname {
     font-size: 1.4rem;
   }
