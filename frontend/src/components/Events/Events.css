@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dekko&display=swap");
 
 .Events {
     padding-top: 80px;
@@ -20,6 +21,7 @@
     height: 90%;
     border-radius: 20px;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .event-image {
@@ -43,7 +45,7 @@
     text-align: justify;
     text-indent: 2em;
     font-size: 18px;
-    font-family: 'Roboto', sans-serif; /* Use a more standard font */
+    font-family: 'Dekko', sans-serif; /* Use a more standard font */
     font-weight: 400; /* Regular font weight */
     color: #ffffff; /* Darker color for better contrast */
     line-height: 1.5; /* Improved line spacing */

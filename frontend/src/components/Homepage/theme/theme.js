@@ -54,16 +54,15 @@ export default function Theme() {
       <div className="main-align">
         <div className="The-text for-main-eve" data-aos="fade-right">
           We, the team of Rotaract Club of Bangalore Institute of Technology. have decided the
-          theme of the Rotayear 2023-24 to be “Unveiling Horizons”. We believe
-          in standing out as exceptional. The brilliant team we have this year
-          has unique talents. Shining like a bright unicorn with the horn as our
-          guiding spirit, we would be developing leadership and bravery. With
-          optimistic spirits and unity, we wish to prove ourselves to be
-          extraordinary. Sticking to roots yet getting known for our
-          sharpness,agile,frisky what we mean by our logo, the Deer. We are
-          aiming for an amazing Rotayear. As galant and proud as a deer, our
-          club is ready for this upcoming joyride of Rotaract.We Aim to be
-          Exceptional
+          theme of the Rotayear 2023-24 to be “Unveiling Horizons”. In adopting the theme "Unveiling Horizons," 
+          we embark on a journey that symbolizes the vast and limitless potential lying before us. 
+          At the heart of this theme lies our collective commitment to exploration, growth, and the pursuit of endless possibilities. 
+          As a club, our overarching goal for the upcoming year is to cultivate an environment that 
+          encourages the expansion of knowledge, challenges us to step boldly beyond our comfort zones, and 
+          empowers us to break through barriers. Just as the eagle unveils new horizons with 
+          each majestic flight, so too do we envision a year filled with discoveries, achievements, and growth. 
+          Together, as a united and spirited community, we aim to spread our wings and soar to 
+          unprecedented heights, leaving an indelible mark on our shared path of service, leadership, and positive change.
         </div>
         <div className=" The-Headtext sub-sub-classname">1. Community Service</div>
         <div className="The-text" data-aos="fade-up">
