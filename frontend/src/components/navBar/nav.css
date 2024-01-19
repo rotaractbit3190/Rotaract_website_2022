@@ -98,7 +98,13 @@ li a:hover {
   align-items: center;
 }
 
-
+link[rel="icon"] {
+  border-radius: 50%;
+  overflow: hidden;
+}
+link[rel="icon"] {
+  background-color: transparent;
+}
   @media screen and (max-width: 961px) {
     .burger-name{
       display: block;
