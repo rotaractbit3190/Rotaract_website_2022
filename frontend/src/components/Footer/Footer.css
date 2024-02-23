@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Canva+Sans&display=swap');
 
 .Footer-start {
     width: 100%;
@@ -33,7 +33,7 @@
 
 .copyrights {
     color: aliceblue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Change font-family */
+    font-family: 'Canva Sans', sans-serif; /* Change font-family to Canva Sans */
     text-align: center;
     padding: 10px; /* Add padding for better readability */
 }

@@ -64,31 +64,27 @@ export default function Theme() {
           Together, as a united and spirited community, we aim to spread our wings and soar to 
           unprecedented heights, leaving an indelible mark on our shared path of service, leadership, and positive change.
         </div>
-        <div className=" The-Headtext sub-sub-classname">1. Community Service</div>
+        <div className=" The-Headtext sub-sub-classname">✦ Community Service</div>
         <div className="The-text" data-aos="fade-up">
           We believe in serving the community. The team of RCBIT works in full
           force for the betterment of the society and does the needful to the
           unprivileged.,
         </div>
-        <div className=" The-Headtext sub-sub-classname">2. Club Service</div>
+        <div className=" The-Headtext sub-sub-classname">✦ Club Service</div>
         <div className="The-text" data-aos="fade-right">
           With activities on all levels, we focus on club service as With
           activities on all levels, we focus on club service as well. A healthy
           and friendly environment is maintained within the club. Bonding and
           fellowships are important to us.
         </div>
-        <div className=" The-Headtext sub-sub-classname" data-aos="fade-up">
-          3. International Service
-        </div>
+        <div className=" The-Headtext sub-sub-classname" data-aos="fade-up">✦ International Service</div>
         <div className="The-text" data-aos="fade-right">
           Spreading wings and flying with glory is what RCBIT aims for. We
           believe in expanding our boundaries not only in the district but also
           globally. Friendship and collaboration worldwide is what we specially
           take care of in every Rota-Year.
         </div>
-        <div className=" The-Headtext sub-sub-classname" data-aos="fade-up">
-          4. Professional Development
-        </div>
+        <div className=" The-Headtext sub-sub-classname" data-aos="fade-up">✦ Professional Development</div>
         <div className="The-text" data-aos="fade-right">
           Growing with Rotaract is an extraordinary process. Inculcating
           responsibility and pressure management are the two things we
