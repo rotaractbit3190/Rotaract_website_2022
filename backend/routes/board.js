@@ -41,7 +41,7 @@ const testdata=[
     "USN": "1BI21EC058",
     "Date of birth": "04/22/2002",
     "Blood Group": "O+",
-    "post": "Event Coordinator ",
+    "post": "Vice President ",
     "instagram": "hritikamk2",
     "linkedin": "Hritika M Kalaria ",
     "Hobbies": "Dancing, painting, reading novels, listening to music, Taking a walk in nature",
