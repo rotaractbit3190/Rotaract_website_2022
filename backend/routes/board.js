@@ -23,8 +23,8 @@ const testdata=[
     "instagram": "@prajwal.btc",
     "linkedin": "https://www.linkedin.com/in/ds-prajwal-gowda/",
     "Hobbies": "A book enthusiast and coding aficionado. Animals hold a special place his my heart. ",
-    "image":"https://firebasestorage.googleapis.com/v0/b/rotaract-2022-42d17.appspot.com/o/Board%2FInShot_20211204_131738283%20-%20Anushka%20Thakur.jpg?alt=media&token=c6fd2fa8-8a00-4cb7-b1f0-28d61c84b401"
-   },
+    "image":"https://firebasestorage.googleapis.com/v0/b/rotaract-2022-42d17.appspot.com/o/Board%2FInShot_20211204_131738283%20-%20Anushka%20Thakur.jpg?alt=media&token=c6fd2fa8-8a00-4cb7-b1f0-28d61c84b401" 
+  },
    {
     "title": "Anushka Thakur ",
     "USN": "1BI20EC020 ",
@@ -115,7 +115,7 @@ const testdata=[
     "instagram": "bujj_gowda",
     "linkedin": "https://www.linkedin.com/",
     "Hobbies": "Singing, Drawing, writing poems, playing football and basketball. ",
-    "image":"https://firebasestorage.googleapis.com/v0/b/rotaract-2022-42d17.appspot.com/o/Board%2FRotaract%20-%20Vikhyath%20K.jpg?alt=media&token=1bac651f-0c30-40de-91df-efa8b51b6559",
+    "image":"gs://rotaract-2022-42d17.appspot.com/Board_2023/Krushik R.jpg",
     "description":"Our ambitious and enthusiastic International director. The bright tech-head whose best day would be spent playing badminton and exploring."
    },
    {
