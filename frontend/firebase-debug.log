@@ -1,0 +1,31 @@
+[debug] [2024-02-25T04:15:08.734Z] ----------------------------------------------------------------------
+[debug] [2024-02-25T04:15:08.737Z] Command:       /usr/local/share/nvm/versions/node/v20.10.0/bin/node /home/codespace/nvm/current/bin/firebase deploy
+[debug] [2024-02-25T04:15:08.737Z] CLI Version:   13.3.1
+[debug] [2024-02-25T04:15:08.737Z] Platform:      linux
+[debug] [2024-02-25T04:15:08.737Z] Node Version:  v20.10.0
+[debug] [2024-02-25T04:15:08.738Z] Time:          Sun Feb 25 2024 04:15:08 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-02-25T04:15:08.738Z] Env Overrides: GITHUB_API_URL
+[debug] [2024-02-25T04:15:08.738Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-25T04:15:08.803Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-25T04:15:08.804Z] > authorizing via signed-in user (bitrotaract@gmail.com)
+[debug] [2024-02-25T04:15:08.804Z] [iam] checking project rotaract-2022-42d17 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-25T04:15:08.805Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rotaract-2022-42d17:testIamPermissions [none]
+[debug] [2024-02-25T04:15:08.805Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rotaract-2022-42d17:testIamPermissions x-goog-quota-user=projects/rotaract-2022-42d17
+[debug] [2024-02-25T04:15:08.806Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rotaract-2022-42d17:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-25T04:15:10.313Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rotaract-2022-42d17:testIamPermissions 200
+[debug] [2024-02-25T04:15:10.314Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rotaract-2022-42d17:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-25T04:15:10.315Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rotaract-2022-42d17 [none]
+[debug] [2024-02-25T04:15:10.690Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rotaract-2022-42d17 200
+[debug] [2024-02-25T04:15:10.691Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rotaract-2022-42d17 {"projectId":"rotaract-2022-42d17","projectNumber":"182752550910","displayName":"rotaract-2022","name":"projects/rotaract-2022-42d17","resources":{"hostingSite":"rotaract-2022-42d17","storageBucket":"rotaract-2022-42d17.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_9628e800-b3f6-42c4-a320-c699486248ee"}
+[info] 
+[info] === Deploying to 'rotaract-2022-42d17'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-02-25T04:15:10.695Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rotaract-2022-42d17/versions [none]
+[debug] [2024-02-25T04:15:10.695Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rotaract-2022-42d17/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-02-25T04:15:11.994Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rotaract-2022-42d17/versions 200
+[debug] [2024-02-25T04:15:11.994Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rotaract-2022-42d17/versions {"name":"projects/182752550910/sites/rotaract-2022-42d17/versions/f01051482d846cf3","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[rotaract-2022-42d17]: beginning deploy... 
+[info] i  hosting[rotaract-2022-42d17]: found 34 files in build 
+[debug] [2024-02-25T04:15:12.005Z] [hosting] uploading with 200 concurrency
