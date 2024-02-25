@@ -56,7 +56,7 @@ sub-sub-classname {
   }
 
   .sub-sub-classname {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .youtube-iou {
     max-width: auto; /* Ensures the video doesn't exceed its container */
@@ -81,7 +81,7 @@ sub-sub-classname {
 @media screen and (max-width: 1200px) {
   /* Styles for large screens */
   .sub-sub-classname {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .The-Headtext {
     font-size: 1.4rem;
@@ -92,7 +92,7 @@ sub-sub-classname {
 @media screen and (max-width: 900px) {
   /* Styles for medium-sized screens */
   .sub-sub-classname {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .The-Headtext {
     font-size: 1.2rem;
@@ -103,7 +103,7 @@ sub-sub-classname {
 @media screen and (max-width: 600px) {
   /* Styles for small screens */
   .sub-sub-classname {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .The-Headtext {
     font-size: 1rem;
