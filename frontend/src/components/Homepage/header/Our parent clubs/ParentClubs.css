@@ -37,18 +37,19 @@
     margin-top: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding: 10%;
   }
 
   .child-parent {
-    height: 5rem;
+    height: 7rem;
     margin-right: auto;
   }
 
   .child-parent-1 {
     margin-top: 30px;
-    height: 8rem;
+    height: 10rem;
   }
   
 }
