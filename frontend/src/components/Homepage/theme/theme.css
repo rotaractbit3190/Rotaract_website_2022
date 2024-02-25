@@ -35,6 +35,11 @@ sub-sub-classname {
   padding-left: 60px;
 }
 
+.youtube-iou {
+  max-width: 100%; /* Ensures the video doesn't exceed its container */
+  height: auto; /* Allows the video to maintain its aspect ratio */
+  margin: 0 auto; /* Centers the video horizontally within its container */
+}
 
 .sub-sub-classname {
   font-size: 1.7rem;
@@ -51,10 +56,57 @@ sub-sub-classname {
   }
 
   .sub-sub-classname {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
-  .youtube-iou{
-    height:250px;
-    width: 90vw;
+  .youtube-iou {
+    max-width: auto; /* Ensures the video doesn't exceed its container */
+    height: auto; /* Allows the video to maintain its aspect ratio */
+    margin: 0 auto; /* Centers the video horizontally within its container */
+  }  
+  .youtube-iou {
+    max-width: 90vw; /* Set maximum width relative to the viewport width */
+  }
+  .The-Headtext {
+    font-size: 1.4rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px #6835b6, 0 0 20px #6835b6, 0 0 30px #6835b6;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding-left: 39px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* Styles for large screens */
+  .sub-sub-classname {
+    font-size: 1rem;
+  }
+  .The-Headtext {
+    font-size: 1.4rem;
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* Styles for medium-sized screens */
+  .sub-sub-classname {
+    font-size: 1rem;
+  }
+  .The-Headtext {
+    font-size: 1.2rem;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Styles for small screens */
+  .sub-sub-classname {
+    font-size: 1rem;
+  }
+  .The-Headtext {
+    font-size: 1rem;
+    padding-left: 30px;
   }
 }

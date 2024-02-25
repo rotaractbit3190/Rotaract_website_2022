@@ -64,6 +64,7 @@
     font-weight: bold;
     text-shadow: 6px 2px #183F46;
     line-height: 1.2; /* Added line-height */
+    font-size: 1.4rem;
   }
 
   .typingtext {
@@ -78,14 +79,33 @@
     content: '';
     background-image: url('./deer.png');
     background-repeat: no-repeat;
-    background-size: 20rem;
+    background-size: contain; /* Use 'contain' to ensure the entire image fits within the container */
     position: absolute;
-    left: 10%;
-    top: 30rem;
-    width: 88%;
+    left: 50%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust to center the image */
+    top: 50%; /* Adjust the top position as needed */
+    width: 80%; /* Adjust the width as needed */
     height: 100%;
     z-index: -1000;
-    overflow: hidden;
     opacity: 0.3;
   }
+  
 }
+@media screen and (max-width: 768px) {
+  .for-deer::before {
+    top: 38%; /* Adjust the top position for smaller screens */
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .for-deer::before {
+    top: 50%; /* Adjust the top position for medium-sized screens */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .for-deer::before {
+    top: 60%; /* Adjust the top position for larger screens */
+  }
+}
+

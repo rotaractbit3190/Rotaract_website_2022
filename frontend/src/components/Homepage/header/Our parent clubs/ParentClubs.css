@@ -27,30 +27,29 @@
   .main-one {
     height: 100px;
     margin: 50px 20px 0px 50px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: "Poppins", sans-serif;
     text-shadow: rgb(255 215 77 / 60%) -1px -1px 6px,
       rgb(124 127 255 / 60%) 1px 1px 6px;
-  
     color: white;
   }
   .main-parent {
     margin-top: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    align-content: center;
   }
-  .child-parent {
-    height: 6rem;
-    margin-right: auto;
-   
 
+  .child-parent {
+    height: 5.5rem;
+    margin-right: auto;
+    margin-bottom: 10px;
   }
+
   .child-parent-1 {
     margin-top: 30px;
-    height: 8rem;
+    height: 11rem;
   }
   
 }
