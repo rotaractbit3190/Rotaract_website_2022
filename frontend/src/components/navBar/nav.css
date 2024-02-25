@@ -9,13 +9,6 @@ ul {
   display: flex;
   flex-direction: row;
   padding-left: 40rem;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  padding: 0.2px 0;
-  position: fixed;
-  justify-content: flex-end;
-  padding-right: 5%;
 }
 
 .header {

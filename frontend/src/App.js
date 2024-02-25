@@ -9,8 +9,8 @@ import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/login/Login";
 import Board from "./components/Board/Board";
-import AboutUs from "./components/AboutUs/AboutUs";
-import Events from "./components/Events/Events";
+// import AboutUs from "./components/AboutUs/AboutUs";
+// import Events from "./components/Events/Events";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Loader from "./components/loader/Loader";
 

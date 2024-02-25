@@ -19,7 +19,7 @@ export default function Board() {
     linkedin: "",
   });
   const [image, setimage] = useState("");
-  const [loading, setloading] = useState(false);
+  // const [loading, setloading] = useState(false);
   const refClose = useRef();
   const ref1 = useRef(null);
   const initial = [];
@@ -114,7 +114,7 @@ export default function Board() {
     // 
   };
   const editNote = async (id) => {
-    const response = await fetch(`${host}/rotaract/update/${id}`, {
+    const response = await fetch(`${host}/rotaract/update/${id}`,{
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ export default function Board() {
         year: title.year,
       }), // body data type must match "Content-Type" header
     });
-    const json = await response.json();
+    // const json = await response.json();
     
 
     let newcard = JSON.parse(JSON.stringify(content));
