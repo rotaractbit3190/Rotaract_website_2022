@@ -24,7 +24,6 @@ export default function NavBar(props) {
 
   const gotop = () => {
     setSidebar(false);
-    window.location.reload();
   };
 
   const closeClick = () => {
@@ -66,16 +65,16 @@ export default function NavBar(props) {
           </div>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={gotop}>Home</Link>
             </li>
             <li>
-              <Link to="Events">Events</Link>
+              <Link to="Events" onClick={gotop}>Events</Link>
             </li>
             <li>
-              <Link to="Board">Board</Link>
+              <Link to="Board" onClick={gotop}>Board</Link>
             </li>
             <li>
-              <Link to="/ContactUs">Contact</Link>
+              <Link to="/ContactUs" onClick={gotop}>Contact</Link>
             </li>
             {localStorage.getItem("token") ? (
               <li>
@@ -83,7 +82,7 @@ export default function NavBar(props) {
               </li>
             ) : null}
             <li>
-              <a href="https://forms.gle/rwjZh4pCsaQXLD8r9">Join Us</a>
+              <a href="https://forms.gle/VTqs2wZoS9GdEvTq6" target="_blank" rel="noopener noreferrer">Join Us</a>
             </li>
           </ul>
         </div>
@@ -119,8 +118,10 @@ export default function NavBar(props) {
               </li>
               <li>
                 <a
-                  href="https://forms.gle/MzbJ6ZP2XySagU1E8"
+                  href="https://forms.gle/VTqs2wZoS9GdEvTq6"
                   className="header-li"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={gotop}
                 >
                   Join Us
