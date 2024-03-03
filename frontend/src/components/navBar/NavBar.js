@@ -115,6 +115,9 @@ export default function NavBar(props) {
                 </Link>
               </li>
               <li>
+                <Link to="/magazine">VRINDA</Link>
+              </li>
+              <li>
                 <Link to="/ContactUs" className="header-li" onClick={gotop}>
                   Contact Us
                 </Link>
