@@ -61,7 +61,7 @@ export default function NavBar(props) {
             <img src={logo} alt="here you go" className="logoSize" />
           </div>
           <div className="burger-name">
-            <FiMenu size="2rem" className="try" onClick={handleClick} />
+            <FiMenu size="1.5rem" className="try" onClick={handleClick} style={{ color: "white" }} />
           </div>
           <ul>
             <li>
