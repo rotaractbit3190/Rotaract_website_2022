@@ -74,6 +74,9 @@ export default function NavBar(props) {
               <Link to="Board" onClick={gotop}>Board</Link>
             </li>
             <li>
+              <Link to="/magazine">VRINDA</Link>
+            </li>
+            <li>
               <Link to="/ContactUs" onClick={gotop}>Contact</Link>
             </li>
             {localStorage.getItem("token") ? (

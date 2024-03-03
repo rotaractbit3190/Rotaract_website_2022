@@ -9,6 +9,7 @@ import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/login/Login";
 import Board from "./components/Board/Board";
+import Magazine from "./components/navBar/Magazine";
 // import AboutUs from "./components/AboutUs/AboutUs";
 // import Events from "./components/Events/Events";
 import ContactUs from "./components/ContactUs/ContactUs";
@@ -39,7 +40,7 @@ export default function App() {
             <Route path="/" element={<HomePage nocursor={checkcursor} />} />
             <Route path="/login" element={<Login />} />
             <Route path="/Board" element={<Board/>} />
-         
+            <Route path="/Magazine" element={<Magazine/>} />
             <Route path="/Events" element={<Events loader={setLoading} />} />
             <Route path="/ContactUs" element={<ContactUs/>} />
           </Routes>
